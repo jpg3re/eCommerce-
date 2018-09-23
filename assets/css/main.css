@@ -2233,6 +2233,7 @@ input, select, textarea {
 		.wrapper.style3 {
 			background: #fff;
 			color: inherit;
+			width: 100%;
 		}
 
 		.wrapper.style4 {
