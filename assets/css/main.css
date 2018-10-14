@@ -2666,7 +2666,6 @@ input, select, textarea {
 				font-size: 14pt;
 			}
 			select {
-				height: 100%;
 				padding: 5px;
 			}
 
@@ -2691,7 +2690,7 @@ input, select, textarea {
 				line-height: 1.65em;
 			}
 			select {
-				height: 100%;
+				height: 60%;
 				padding: 5px;
 			}
 
