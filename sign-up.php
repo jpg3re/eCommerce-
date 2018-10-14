@@ -4,6 +4,12 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+    $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
+	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
+?>
+
+
 <html>
 	<head>
 		<title>Sign Up</title>
@@ -48,7 +54,7 @@
 										<div class="row gtr-50">
 											<div class="col-12">
 												<label for="name">Full Name</label>
-												<input type="text" name="name" /> 
+												<input type="text" name="name" />
 											</div>
 											<div class="col-12">
 												<label for="email">Email</label>
