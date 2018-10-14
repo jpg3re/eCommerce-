@@ -4,11 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<?php
-    $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
-	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
-?>
-
 
 <html>
 	<head>
@@ -50,11 +45,11 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form>
+									<form name="insert" action="sign-up.php" method="POST">
 										<div class="row gtr-50">
 											<div class="col-12">
 												<label for="name">Full Name</label>
-												<input type="text" name="name" />
+												<input type="text" name="full_name" />
 											</div>
 											<div class="col-12">
 												<label for="email">Email</label>
@@ -131,7 +126,7 @@
 											</div>
 											<div class="col-4">
 												<label for="zip">Zip Code</label>
-												<input type="text" name="zip" />
+												<input type="text" name="zip_code" />
 											</div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
@@ -161,3 +156,10 @@
 
 	</body>
 </html>
+
+<?php
+    $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
+	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
+	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$_POST[email]','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$_POST[password]')";
+	$result = pg_query($query); 
+?>
