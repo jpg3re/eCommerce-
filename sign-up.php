@@ -157,7 +157,6 @@
 				$(document).ready(function() {
 
 				  $('#insert').submit(function(e) {
-				    e.preventDefault();
 				    var password = $('#password').val();
 						var full_name = $('#full_name').val();
 						var email = $('#email').val();
@@ -168,27 +167,35 @@
 						$(".error").remove();
 						if(full_name.length < 1) {
 							$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
+							e.preventDefault();
 						}
 						if (!/^[a-zA-Z\s]*$/.test(full_name)){
 							$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
+							e.preventDefault();
 						}
 						if (password.length < 8) {
 							$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
+							e.preventDefault();
 						}
 						if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
 							$('#email').after('<span class="error" style="color:red">Invalid email</span>');
+							e.preventDefault();
 						}
 						if(!/^[a-zA-Z0-9\-\s]+$/.test(address)){
 							$('#address').after('<span class="error" style="color:red">Invalid address</span>');
+							e.preventDefault();
 						}
 						if(!/^[a-zA-Z0-9\-\s]+$/.test(city)){
 							$('#city').after('<span class="error" style="color:red">Invalid city</span>');
+							e.preventDefault();
 						}
 						if(!/^[0-9]{5}(?:-[0-9]{4})?$/.test(zip_code)){
 							$('#zip_code').after('<span class="error" style="color:red">Invalid zip code</span>');
+							e.preventDefault();
 						}
 						if(state == ""){
 							$('#state').after('<span class="error" style="color:red">Must select a state</span>');
+							e.preventDefault();
 						}
 					});
 				 });
@@ -199,7 +206,7 @@
 <?php
 $password= $_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-var_dump($hashed_password);
+// var_dump($hashed_password);
 
     $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
 	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
