@@ -70,7 +70,7 @@
 											<div class="col-4">
 												<label for="state">State</label>
 												<select name="state" id="state">
-													<option value="" disabled selected>Select State</option>
+													<option value="" selected>Select State</option>
 													<option value="AL">Alabama</option>
 													<option value="AK">Alaska</option>
 													<option value="AZ">Arizona</option>
@@ -163,6 +163,8 @@
 						var email = $('#email').val();
 						var address = $('#address').val();
 						var city = $('#city').val();
+						var zip_code = $('#zip_code').val();
+						var state = $('#state').val();
 						$(".error").remove();
 						if(full_name.length < 1) {
 							$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
@@ -181,6 +183,12 @@
 						}
 						if(!/^[a-zA-Z0-9\-\s]+$/.test(city)){
 							$('#city').after('<span class="error" style="color:red">Invalid city</span>');
+						}
+						if(!/^[0-9]{5}(?:-[0-9]{4})?$/.test(zip_code)){
+							$('#zip_code').after('<span class="error" style="color:red">Invalid zip code</span>');
+						}
+						if(state == ""){
+							$('#state').after('<span class="error" style="color:red">Must select a state</span>');
 						}
 					});
 				 });
