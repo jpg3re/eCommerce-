@@ -45,31 +45,31 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form name="insert" action="sign-up.php" method="POST">
+									<form id="insert" name="insert" action="sign-up.php" method="POST">
 										<div class="row gtr-50">
 											<div class="col-12">
 												<label for="name">Full Name</label>
-												<input type="text" name="full_name" />
+												<input type="text" name="full_name" id="full_name"/>
 											</div>
 											<div class="col-12">
 												<label for="email">Email</label>
-												<input type="text" name="email" title="Email" />
+												<input type="text" name="email" title="Email" id="email" />
 											</div>
 											<div class="col-12">
 												<label for="name">Password</label>
-												<input type="text" name="password" /> 
+												<input type="text" name="password" id="password"/>
 											</div>
 											<div class="col-12">
 												<label for="address">Address</label>
-												<input type="text" name="address" /> 
+												<input type="text" name="address" id="address"/>
 											</div>
 											<div class="col-4">
 												<label for="city">City</label>
-												<input type="text" name="city"/>
+												<input type="text" name="city" id="city"/>
 											</div>
 											<div class="col-4">
 												<label for="state">State</label>
-												<select name="state">
+												<select name="state" id="state">
 													<option value="" disabled selected>Select State</option>
 													<option value="AL">Alabama</option>
 													<option value="AK">Alaska</option>
@@ -126,7 +126,7 @@
 											</div>
 											<div class="col-4">
 												<label for="zip">Zip Code</label>
-												<input type="text" name="zip_code" />
+												<input type="text" name="zip_code" id="zip_code">
 											</div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
@@ -153,7 +153,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function() {
 
+				  $('#insert').submit(function(e) {
+				    e.preventDefault();
+				    var password = $('#password').val();
+
+				    $(".error").remove();
+						}
+				    if (password.length < 8) {
+				      $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
+				    }
+				  });
+			});
+		</script>
 	</body>
 </html>
 
@@ -161,5 +175,5 @@
     $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
 	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
 	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$_POST[email]','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$_POST[password]')";
-	$result = pg_query($query); 
+	$result = pg_query($query);
 ?>
