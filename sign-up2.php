@@ -52,7 +52,8 @@
 												<input type="text" name="full_name" id="full_name"/>
 											</div>
 											<div class="col-12">
-												<label for="email">Email</label>
+                                            <span class="error" style="color:red">Please choose email another email</span>
+												<label for="email"></label>
 												<input type="text" name="email" title="Email" id="email" />
 											</div>
 											<div class="col-12">
