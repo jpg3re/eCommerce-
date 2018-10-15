@@ -161,6 +161,8 @@
 				    var password = $('#password').val();
 						var full_name = $('#full_name').val();
 						var email = $('#email').val();
+						var address = $('#address').val();
+						var city = $('#city').val();
 						$(".error").remove();
 						if(full_name.length < 1) {
 							$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
@@ -173,6 +175,12 @@
 						}
 						if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
 							$('#email').after('<span class="error" style="color:red">Invalid email</span>');
+						}
+						if(!/^[a-zA-Z0-9\-\s]+$/.test(address)){
+							$('#address').after('<span class="error" style="color:red">Invalid address</span>');
+						}
+						if(!/^[a-zA-Z0-9\-\s]+$/.test(city)){
+							$('#city').after('<span class="error" style="color:red">Invalid city</span>');
 						}
 					});
 				 });
