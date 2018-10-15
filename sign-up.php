@@ -172,8 +172,12 @@
 </html>
 
 <?php
+$password= $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+var_dump($hashed_password);
+
     $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
 	97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
-	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$_POST[email]','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$_POST[password]')";
+	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$_POST[email]','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', 'hashed_password')";
 	$result = pg_query($query);
 ?>
