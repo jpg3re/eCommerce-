@@ -159,9 +159,20 @@
 				  $('#insert').submit(function(e) {
 				    e.preventDefault();
 				    var password = $('#password').val();
+						var full_name = $('#full_name').val();
+						var email = $('#email').val();
 						$(".error").remove();
+						if(full_name.length < 1) {
+							$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
+						}
+						if (!/^[a-zA-Z\s]*$/.test(full_name)){
+							$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
+						}
 						if (password.length < 8) {
-							$('#password').after('<span class="error">Password must be at least 8 characters long</span>');
+							$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
+						}
+						if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+							$('#email').after('<span class="error" style="color:red">Invalid email</span>');
 						}
 					});
 				 });
