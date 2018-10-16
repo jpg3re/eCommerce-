@@ -58,7 +58,7 @@
 											</div>
 											<div class="col-12">
 												<label for="name">Password</label>
-												<input type="text" name="password" id="password"/>
+												<input type="password" name="password" id="password"/>
 											</div>
 											<div class="col-12">
 												<label for="address">Address</label>
