@@ -52,7 +52,7 @@
 												<input type="text" name="full_name" id="full_name"/>
 											</div>
 											<div class="col-12">
-                                            <span class="error" style="color:red">Please choose email another email</span>
+                                            <span class="error" style="color:red">Email already linked to existing account</span>
 												<label for="email"></label>
 												<input type="text" name="email" title="Email" id="email" />
 											</div>
@@ -203,5 +203,3 @@
 		</script>
 	</body>
 </html>
-
-
