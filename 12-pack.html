@@ -81,11 +81,14 @@
                                             <textarea name="message" rows="7"></textarea>
                                         </div>
                                         <div class="col-12">
-                                            <ul class="buttons" style="text-align: center">
-                                                <li><input type="submit" class="special" value="Checkout" /></li>
-                                            </ul>
                                         </div>
                                     </div>
+                                </form>
+                                <form action="https://test.bitpay.com/checkout" method="post" >
+                                  <input type="hidden" name="action" value="checkout" />
+                                  <input type="hidden" name="posData" value="" />
+                                  <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJy+oc08bxzw/TMLirG9eVomzNvLSH19M7PGVubXUz0hkNjLWkdGlXSIoT+cTQIFNdOFisWY2FJJ09yShXspEusCIEZDMDOgi2zvmogNjhT6oJRXe1ulBv6qr/O2WY15kQ7KrWUexRTSAKcl28aVbwUPiqd1JaxqVi40Q6bRWZUtCNDlbrI72o3Auyqe5ephGV" />
+                                  <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
                                 </form>
                             </div>
 
