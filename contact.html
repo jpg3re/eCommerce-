@@ -22,6 +22,7 @@
 						<ul>
 							<li class="current"><a href="index.html">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
+							<li class="current"><a href="product.html">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.html" class="button primary">Log In</a></li>
@@ -44,7 +45,7 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form>
+									<form method="POST" action="sendEmail.php">
 										<div class="row gtr-50">
 											<div class="col-6 col-12-mobile">
 												<label for="name">Name</label>
@@ -64,7 +65,7 @@
 											</div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
-													<li><input type="submit" class="special" value="Send Message" /></li>
+													<li><input type="submit" name="submit" class="special" value="Send Message" /></li>
 												</ul>
 											</div>
 										</div>
@@ -86,6 +87,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
