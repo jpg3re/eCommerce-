@@ -12,7 +12,7 @@ try {
     
 
  $mail->setFrom($_POST['email'], $_POST['name']);
- $mail->addAddress('custombucha@gmail.com');
+ $mail->addAddress('jpg3re@virginia.edu');
  $mail->Subject  = $_POST['subject'];
  $mail->Body     = $_POST['message'];
 
