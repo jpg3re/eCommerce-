@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 $mail = new PHPMailer;                              
-$email->IsSMTP();
+$mail->IsSMTP();
     
 
  $mail->setFrom($_POST['email'], $_POST['name']);
