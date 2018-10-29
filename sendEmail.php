@@ -8,7 +8,7 @@ $mail = new PHPMailer;
 $mail->IsSMTP();
 $mail->Host ="smtp@gmail.com";
 $mail->SMTPAuth   = true; 
-$mail->Port=26;
+$mail->Port=587;
 $mail->Username   = "custombucha@gmail.com"; // SMTP account username
 $mail->Password   = "Custombucha19";        // SMTP account password
 
