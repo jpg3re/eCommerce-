@@ -6,8 +6,8 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 $mail = new PHPMailer;                              
 $mail->IsSMTP();
+$mail->SMTPAuth   = false; 
 $mail->Host ="smtp@gmail.com";
-$mail->SMTPAuth   = true; 
 $mail->Port=587;
 $mail->Username   = "custombucha@gmail.com"; // SMTP account username
 $mail->Password   = "Custombucha19";        // SMTP account password
