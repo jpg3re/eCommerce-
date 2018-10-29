@@ -22,6 +22,7 @@ $email=$_POST['email'];
        </script>
     <?php
 
+  header('Location: sign-up2.php');
         
          
      }
@@ -29,7 +30,6 @@ else{
     //echo "Username works";
 	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$email','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$hashed_password')";
     $result = pg_query($query);
-    header('Location: success.html');
     $mail = new PHPMailer;                              
 $mail->IsSMTP();
 $mail->SMTPAuth   = true; 
@@ -50,7 +50,7 @@ $mail->Password   = "Custombucha19";        // SMTP account password
   } else {
     echo 'Message has been sent.';
   }
-  header('Location: sign-up2.php');
+  header('Location: success.html');
 }  
 
 ?>
