@@ -18,7 +18,7 @@ try {
 
     $mail->send();
     echo 'Message has been sent';
-     //header('Location: success.html');
+     header('Location: contact-success.html');
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
