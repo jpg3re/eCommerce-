@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 // require 'C:\xampp\PHPMailer\src\Exception.php';
 // require 'C:\xampp\PHPMailer\src\PHPMailer.php';
 //require 'C:\xampp\PHPMailer\src\SMTP.php';
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+$mail = new PHPMailer;                              // Passing `true` enables exceptions
 try {
 
     
