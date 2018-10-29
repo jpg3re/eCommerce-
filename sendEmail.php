@@ -2,12 +2,8 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
- require 'vendor/autoload.php';
-// require 'C:\xampp\PHPMailer\src\Exception.php';
-// require 'C:\xampp\PHPMailer\src\PHPMailer.php';
-//require 'C:\xampp\PHPMailer\src\SMTP.php';
-$mail = new PHPMailer;                              // Passing `true` enables exceptions
-try {
+require 'vendor/autoload.php';
+$mail = new PHPMailer;                              
 
     
 
@@ -16,10 +12,12 @@ try {
  $mail->Subject  = $_POST['subject'];
  $mail->Body     = $_POST['message'];
 
-    $mail->send();
-    echo 'Message has been sent';
-     header('Location: contact-success.html');
-} catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-}
+ if(!$mail->send()) {
+    echo 'Message was not sent.';
+    echo 'Mailer error: ' . $mail->ErrorInfo;
+  } else {
+    echo 'Message has been sent.';
+  }
+
+  
 ?>
