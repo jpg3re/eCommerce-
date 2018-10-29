@@ -42,6 +42,7 @@
 <script>
 	var numAddons=0;
 	var extraCost=0;
+	var totalCost=24;
 function checkboxes(){
     var inputElems = document.getElementsByClassName("extra"),
     count = 0;
@@ -51,7 +52,9 @@ function checkboxes(){
 	}
 	numAddons=count;
 	extraCost=numAddons*(.5);
+	totalCost=24+extraCost;
 	document.getElementById("insert").innerHTML=extraCost;
+	document.getElementById("insert1").innerHTML=totalCost;
 }}
 </script>
 
@@ -108,6 +111,11 @@ function checkboxes(){
 										<b>Extra Cost due to add-ons: </b>
 										<div >
 												$<span id="insert">0</span>
+												</div>
+												
+										<b>Total Cost: </b>
+										<div >
+												$<span id="insert1">24</span>
 												</div>
 												<br>
 												<br>
