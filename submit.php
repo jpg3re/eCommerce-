@@ -30,10 +30,10 @@ $mail->Host ="smtp.gmail.com";
 $mail->Port = 587;  
 $mail->Username   = "custombucha@gmail.com"; // SMTP account username
 $mail->Password   = "Custombucha19";        // SMTP account password
-$mail->SMTPDebug=4;
+//$mail->SMTPDebug=4;
 //$mail->SMTPSecure='ssl';
  $mail->setFrom("custombucha@gmail.com", "test");
- $mail->addAddress($_POST['email']);
+ $mail->addAddress($email);
  $mail->Subject  = "test";
  $mail->Body     = "test";
 
