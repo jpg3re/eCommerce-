@@ -39,62 +39,79 @@
                     </header>
 
 
-                    <section class="wrapper style4 special container medium" >
-                        <!-- Content -->
-                            <div class="content">
-                                <form>
-                                    <div class="row gtr-50">
-										<div class="col-6 col-12-mobile">
-											<label for="name">Select Tea Leaves</label> <br>
-											<input type="checkbox" name="green" value="green" id="green"><label for="green">Green</label> <br>
-											<input type="checkbox" name="black" value="black" id="black"><label for="black">Black</label> <br>
-											<input type="checkbox" name="white" value="white" id="white"><label for="white">White</label> <br>
-											<input type="checkbox" name="oolong" value="oolong" id="oolong"><label for="oolong">Oolong</label>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<label for="name">Select Seasonal Flavors</label> <br>
-											<input type="checkbox" name="pumpkin" value="pumpkin" id="pumpkin"><label for="green">Pumpkin</label> <br>
-											<input type="checkbox" name="gingerbread" value="gingerbread" id="gingerbread"><label for="black">Gingerbread</label>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<label for="name">Select Fruit</label> <br>
-											<input type="checkbox" name="strawberry" value="strawberry" id="strawberry"><label for="strawberry">Strawberry</label> <br>
-											<input type="checkbox" name="pinklady" value="pinklady" id="pinklady"><label for="pinklady">Pink Lady</label> <br>
-											<input type="checkbox" name="apple" value="apple" id="apple"><label for="apple">Green Apple</label> <br>
-											<input type="checkbox" name="lemon" value="lemon" id="lemon"><label for="lemon">Lemon</label> <br>
-											<input type="checkbox" name="mango" value="mango" id="mango"><label for="mango">Mango</label> <br>
-											<input type="checkbox" name="passionfruit" value="passionfruit" id="passionfruit"><label for="passionfruit">Passion Fruit</label> <br>
-											<input type="checkbox" name="cranberry" value="cranberry" id="cranberry"><label for="cranberry">Cranberry</label> <br>
-											<input type="checkbox" name="guava" value="guava" id="guava"><label for="guava">Guava</label> <br>
-											<input type="checkbox" name="watermelon" value="watermelon" id="watermelon"><label for="watermelon">Watermelon</label> <br>
-											<input type="checkbox" name="grape" value="grape" id="grape"><label for="grape">Grape</label> <br>
-											<input type="checkbox" name="cherry" value="cherry" id="cherry"><label for="cherry">Cherry</label> <br>
-											<input type="checkbox" name="rasberry" value="rasberry" id="rasberry"><label for="rasberry">Rasberry</label> 
-										</div>
-										<div class="col-6 col-12-mobile">
-											<label for="name">Select Herbs, Spices, and Seeds</label> <br>
-											<input type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
-											<input type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
-											<input type="checkbox" name="ginger" value="ginger" id="ginger"><label for="ginger">Ginger</label> <br>
-											<input type="checkbox" name="lavender" value="lavender" id="lavender"><label for="lavender">Lavender</label> <br>
-											<input type="checkbox" name="chia" value="chia" id="chia"><label for="chia">Chia Seeds</label> <br>
-										</div>
-										<div class="col-12">
-											<label for="subject">Fermentation Period </label>
-											<select name="time">
-												<option value="one">1 Week</option>
-												<option value="two">2 Weeks</option>
-												<option value="three">3 Weeks</option>
-												<option value="four">4 Weeks</option>
-											</select>
-										</div>
-                                        <div class="col-12">
-                                            <label for="message">Message</label>
-                                            <textarea name="message" rows="7"></textarea>
-                                        </div>
-                                        <div class="col-12">
-                                        </div>
-                                    </div>
+                    <script>
+						var numAddons=0;
+						var extraCost=0;
+					function checkboxes(){
+						var inputElems = document.getElementsByClassName("extra"),
+						count = 0;
+						for (var i=0; i<inputElems.length; i++) {
+						if (inputElems[i].type === "checkbox" && inputElems[i].checked === true){
+							count++;
+						}
+						numAddons=count;
+						extraCost=numAddons*(.5);
+						document.getElementById("insert").innerHTML=extraCost;
+					}}
+					</script>
+					
+														
+										<section class="wrapper style4 special container medium" >
+											<!-- Content -->
+												<div class="content">
+													<form>
+														<div class="row gtr-50">
+															<div class="col-6 col-12-mobile">
+																<b for="name">Select Tea Leaves</b> <br>
+																<input type="checkbox" name="green" value="green" id="green" ><label for="green">Green</label> <br>
+																<input type="checkbox" name="black" value="black" id="black"><label for="black">Black</label> <br>
+																<input type="checkbox" name="white" value="white" id="white"><label for="white">White</label> <br>
+																<input type="checkbox" name="oolong" value="oolong" id="oolong"><label for="oolong">Oolong</label>
+															</div>
+															<div class="col-6 col-12-mobile">
+																<b for="name">Select Seasonal Flavors</b> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="pumpkin" value="pumpkin" id="pumpkin"><label for="green">Pumpkin</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="gingerbread" value="gingerbread" id="gingerbread"><label for="black">Gingerbread</label>
+															</div>
+															<div class="col-6 col-12-mobile">
+																<b for="name">Select Fruit</b> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="strawberry" value="strawberry" id="strawberry"><label for="strawberry">Strawberry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="pinklady" value="pinklady" id="pinklady"><label for="pinklady">Pink Lady</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="apple" value="apple" id="apple"><label for="apple">Green Apple</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="lemon"><label for="lemon">Lemon</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="mango"><label for="mango">Mango</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="passionfruit" value="passionfruit" id="passionfruit"><label for="passionfruit">Passion Fruit</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="cranberry"><label for="cranberry">Cranberry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="guava"><label for="guava">Guava</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="watermelon" value="watermelon" id="watermelon"><label for="watermelon">Watermelon</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="grape" value="grape" id="grape"><label for="grape">Grape</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="cherry" value="cherry" id="cherry"><label for="cherry">Cherry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="rasberry" value="rasberry" id="rasberry"><label for="rasberry">Rasberry</label> 
+															</div>
+															<div class="col-6 col-12-mobile">
+																<b for="name">Select Herbs, Spices, and Seeds</b> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="ginger"><label for="ginger">Ginger</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="lavender" value="lavender" id="lavender"><label for="lavender">Lavender</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="chia"><label for="chia">Chia Seeds</label> <br>
+															</div>
+															<div class="col-12">
+																<b for="subject">Fermentation Period </b>
+																<select name="time">
+																		<option value="one">1 Week</option>
+																		<option value="two">2 Weeks</option>
+																		<option value="three">3 Weeks</option>
+																		<option value="four">4 Weeks</option>
+																	  </select>
+															</div>
+															<b>Extra Cost due to add-ons: </b>
+															<div >
+																	$<span id="insert">0</span>
+																	</div>
+																	<br>
+																	<br>
+																</div>
                                 </form>
                                 <form action="https://test.bitpay.com/checkout" method="post" >
                                   <input type="hidden" name="action" value="checkout" />
@@ -111,15 +128,8 @@
 
 						<section id="cta">
 
-							<header>
-								<h2>Get Started!</h2>
-							</header>
-							<footer>
-								<ul class="buttons">
-									<li><a href="#" class="button primary">Begin Your Recipe</a></li>
-									<li><a href="sign-up.php" class="button">Sign Up</a></li>
-								</ul>
-							</footer>
+							
+							
 
 						</section>
 						<footer id="footer">
