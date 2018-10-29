@@ -10,14 +10,14 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 try {
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-    $mail->addAddress('ellen@example.com');               // Name is optional
+    // $mail->setFrom('from@example.com', 'Mailer');
+    // $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+    // $mail->addAddress('ellen@example.com');               // Name is optional
 
-// // $mail->setFrom($_POST['email'], $_POST['name']);
-// // $mail->addAddress('custombucha@gmail.com');
-// // $mail->Subject  = $_POST['subject'];
-// // $mail->Body     = $_POST['message'];
+ $mail->setFrom($_POST['email'], $_POST['name']);
+ $mail->addAddress('custombucha@gmail.com');
+ $mail->Subject  = $_POST['subject'];
+ $mail->Body     = $_POST['message'];
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
