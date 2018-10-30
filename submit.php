@@ -39,10 +39,10 @@ $mail->Username   = "custombucha@gmail.com"; // SMTP account username
 $mail->Password   = "Custombucha19";        // SMTP account password
 //$mail->SMTPDebug=4;
 //$mail->SMTPSecure='ssl';
- $mail->setFrom("custombucha@gmail.com", "test");
+ $mail->setFrom("custombucha@gmail.com", "CostumBucha Incorporated");
  $mail->addAddress($email);
- $mail->Subject  = "test";
- $mail->Body     = "test";
+ $mail->Subject  = "Sign up Confirmation";
+ $mail->Body     = "Thank you for signing up for CostumBucha. We hope you order some of our delicious Kombucha soon.";
 
  if(!$mail->send()) {
     echo 'Message was not sent.';
