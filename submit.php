@@ -27,6 +27,6 @@ else{
     //echo "Username works";
 	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$email','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$hashed_password')";
     $result = pg_query($query);
-    header('Location: success.html');
+    header('Location: member-home.php');
 }
 ?>

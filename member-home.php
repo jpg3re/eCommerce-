@@ -21,12 +21,11 @@
 					<h1 id="logo"><img src="images/logo_grey.png" alt="Custom-Bucha" width="15%"/></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="member-home.php">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
 							<li class="current"><a href="product.html">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
-							<li><a href="log-in.php" class="button primary">Log In</a></li>
+							<li><a href="log-out.html" class="button primary">Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -43,10 +42,9 @@
 					<div class="inner">
 						<header></header>
 						<br />
-						<br />
-						<h1> <strong> All the goodness of Kombucha,
-						<br />
-						customized to your taste </strong> </h1>
+                        <br />
+                        <br />
+                        <h1> <strong> Welcome Member! </strong> </h1>
 						<footer>
 							<ul class="buttons stacked">
 								<li><a href="product.html" class="button fit scrolly">Create Your Recipe</a></li>

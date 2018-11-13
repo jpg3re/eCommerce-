@@ -4,6 +4,24 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+
+$db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com port=5432 dbname=d9n13lvg10h48 user=cmjanmfuwvlbwe password=
+97d83c70e48411627d817565d0b1d3f2d592e6df32448158238e69eae50a61aa");
+
+$password= $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+$email=$_POST['email'];
+$check=pg_query($db_connection,"SELECT hashed_password FROM siteusers WHERE email='$email'");
+if($check == $hashed_password){
+	header('Location: member-home.php');
+}
+else{
+	header('Location: log-in.php');
+}
+
+
+?>
 <html>
 	<head>
 		<title>Log In</title>
@@ -25,7 +43,7 @@
 							<li class="current"><a href="product.html">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
-							<li><a href="log-in.html" class="button primary">Log In</a></li>
+							<li><a href="log-in.php" class="button primary">Log In</a></li>
 						</ul>
 					</nav>
 				</header>
