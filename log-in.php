@@ -53,7 +53,7 @@
                                             </div>
                                             <div class="col-12">
 												<label for="password">Password</label>
-                                                <input type="text" name="password" />
+                                                <input type="password" name="password" />
                                             </div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
