@@ -50,7 +50,7 @@ $mail->Password   = "Custombucha19";        // SMTP account password
   } else {
     echo 'Message has been sent.';
   }
-  header('Location: success.html');
+  header('Location: member-home.php');
 }  
 
 ?>
