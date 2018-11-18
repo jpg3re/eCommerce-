@@ -39,26 +39,161 @@
                     </header>
 
 
-                    <script>
-						var numAddons=0;
-						var extraCost=0;
-						var totalCost=42;
-					function checkboxes(){
-						var inputElems = document.getElementsByClassName("extra"),
-						count = 0;
-						for (var i=0; i<inputElems.length; i++) {
-						if (inputElems[i].type === "checkbox" && inputElems[i].checked === true){
-							count++;
-						}
-						numAddons=count;
-						extraCost=numAddons*(.5);
-						totalCost=42+extraCost;
-						document.getElementById("insert").innerHTML=extraCost;
-						document.getElementById("insert1").innerHTML=totalCost;
-					}}
-					</script>
-					
-														
+										<script>
+											var numAddons=0;
+											var extraCost=0;
+											var totalCost=42;
+											var buttonCode =
+											'<form action="https://test.bitpay.com/checkout" method="post" >' +
+												'<input type="hidden" name="action" value="checkout" />' +
+												'<input type="hidden" name="posData" value="" />' +
+												'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJbqJBBzhw6iglqdbgqkhHMap4E5VA5JDENCnhY/Tm0Vucdm/OIvh5OBQ8hQPVVsz0bqjKHPaxXmsoDqP4xRSFfEUBkOjzRVOt09++Ai71K8s6ud7xxznSA5rgyn39nY5BlYOj4MnLnwpTDBbuRbQbwtB4qUxT/VygeM8EBZ+A3KlvKnMPIrBD88k+00gmusST" />'+
+												'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+											'</form>';
+											function checkboxes(){
+										    var inputElems = document.getElementsByClassName("extra"),
+										    countPremium = 0;
+												countOverLimit = 0;
+										    for (var i=0; i<inputElems.length; i++) {
+										    if (inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id == "premium"){
+										        countPremium++;
+											}
+											if (inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id == "fruit"){
+													countOverLimit++;
+											}
+											if(countOverLimit < 3){
+												numAddons = countPremium;
+											}
+											if(countOverLimit > 3){
+												numAddons = countPremium + (countOverLimit - 3);
+											}
+											extraCost=numAddons*(.5);
+											totalCost=42+extraCost;
+											if(totalCost == 42){
+												var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													' <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ+DFETpX3gh3EI+JWC6ztQOzpiFiVu4xQz8F576gzCoRqhCIWoNVwO8ZcS6R2F0iZS8XY/vNJJLrOKjDLOL3HoZiyqg0zZuCMnsc5jZ0oLZojwjJEBDpYJeX14Lg9aTiLgbAL8MCM5nim2EXqmSgfyZt4e7toa1rU5rV2m8tqqZMnX2yxWUugXWjvkudAER5X" />'+
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 42.5){
+												var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJy+oc08bxzw/TMLirG9eVoi8hsMaaFhhzWVOY1k253XwIBEltWR0Xqsuy8DNVTEY+EQkdvaot8UPy2W3rseV7QLc6AO/RWBi+mVEKIr1dEdkFZgN1q54bfW4EsgyXZQsSaf75DgXvYZa1v3mFYGovlTeROA/+i+dvF+E6JsolTvIJCMHAlXDdU4lv35b8hfdx" />'+
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >'+
+												'</form>';
+											}
+											if(totalCost == 43){
+											var buttonCode =
+											'<form action="https://test.bitpay.com/checkout" method="post" >' +
+												'<input type="hidden" name="action" value="checkout" />' +
+												'<input type="hidden" name="posData" value="" />' +
+												'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJN0os4str9PWqC0yI/kndzl0NR50OwGM3H1y3HYNblNwX2Gt/iHPIjwzyLXvmfFfpuVaoeEA+CI1wwOzwHuq5oSxdyvIuU9s0h26RHIbkZse5PWXH6Tl03lnBC25YwAYVNv7e6mYMimFP1dU713k0fR8eB9SI15NZbIZg01iNHXL+q0ntaxHeDSPcJvIAqkUV" />' +
+												'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >'+
+											'</form>';
+											}
+											if(totalCost == 43.5){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													' <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJIi6PeUKQiFn6zrFK/9yQXrnC/4kwE7YlKWiiB6WXBEuRXANDYuK3cRVTMKB1fZJXh3gjpY+zwOmwli68SYSFDqM94yL9I6nQo44A+lzL0SWpQt3GnvBxZzgHoOSfi5WlKx3x41tQZLvQJmgSUx+SkFXlwugaA84vP+CrTy0ivtjJKQAQomXhHZhQ2+iJ/POO" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 44){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJmqu2KfMEgH0JHz+oYy2jjJKo/xv+AIhwEYJD9aekpECR+C4u2qm70UMp1QvUEUvqKaO2MqydtYaQ+aExTxtIuOPKhnI+WIJQNjxQOfdVAnZCGDeKp5emLOrt0DcvqX9Ym35kLZNV3KTgJScze7qtkEnCF0b6rLZNMpGczuogo+D1dU66YNwnwuW1B9BrVG6D" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 44.5){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJh6jGnVmkT7RmOe644/EpBYnDlT9E8b6Pdx3cWG0IBpVnGvNT4CMeOpouC5mEmECBKR81pqogQM9VogmLoUSx5XfVRmRGCTdEc3M3pRBMwTg1JPbi0b6wh9t07HApo4y/qEADoly0OhocXcVJ8gR6p1Nq7HscrFMCWRjzgaXUS5qNAE1AidGn+RqrOxOte9II" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 45){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJjZYyFaGI0uDJ+jNQbS95EXihZd+flV4u12Csk4u53sye3XSqap3lHIxZfQRsGM4JXDMeGJU1pUm3dsmA4i+dsGNo/DllTi94ndSyX9G5TPfRmWFV3NxqAiHiw0IiQ2Gs81h26yij93nw3UFMes3ecljXEhFPA5R8fnSUCRF7JzeO6XbmVDx82GLzVxerXSay" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 45.5){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJDHT8ZWqJwC9iDOkWCmr/oVFZquI7G2/qA+AIExRwW189VHeguPuF6EkgPfAMovV6MevLJuAZ8LJMmVHKOUFeWVJdEisYoHkaAknPeWGgQkGpX4nGNBektS2KW96sIQm61alHpNawKXitN2937Ads4zeX9Vz1oXtjEDZt/A7tsbO+XEPXaijUFyCbE/V9AL0q" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 46){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJGLBIkeGpl7I9hFfphfW9jrmUjni4KRUcwvnflSPmlgH0LhZKs1ZVfwVILzeFhPF4tKBgThPmHahi1HNbCElgyTSI5FwXE3xsdzm7Tz0ghzfwg1PKu7JmyPmWpzwnw3xSWzNC/LMZO9AQXU6+FS1JkBDtIyrlr1cBouXmFz3wwDbGdDxJvhbBgibJ5ugwZAAL" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 46.5){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJpiLW41lan94L+CXkLTaEvZut27LXEBUKMTkfguodHsvQd7nQSjlJS7x86Xm/QtYmC5ppagIKE/YnHiz5cZyUsX7IF5U3m+v5odEh9GXXDChiV0edXSB1fbUKe4fD00SfQPhnXfDO9OHi0Z6hjynSHynqQotv6ocCu4MNKCkBPnBjmvBQ0KqXWrTsYCNszq47" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 47){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ/vnvHovcCMptPeZ0qnbCrLXOTfPp7oP2y2sd9BchOGbPzRjpd5+uAd7l8USG1CirU1htjhSYQB0miyE+LdnPciFTOX/7LwGLbo1Uqo83+94V17g0QN6/SLS6j2Gg/QwefNJ/tjvw4007xJDhUO7WD9UM6YyeYCHBYH30fTKx1mKbbF9nFv/PJEyKDS9ac7+B" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 47.5){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJtieE4/KWvKycG4BtFhIGl1jSEezQZqpvw5MPjK83+34muPJyxzX8rUUWiXZbCFVyTypPkKzY7yI832RNeV1HKR5dBlSjU+BMg70UU7xHzZwmDiKeUern5WFjm+PIa6Wkfs7T3b3osmcQd93J4qm0QqrwiH5h0eJzG5VIk8qqTVMsgMKnJ9GUkZHPD2p6RED6" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											if(totalCost == 48){
+											var buttonCode =
+												'<form action="https://test.bitpay.com/checkout" method="post" >' +
+													'<input type="hidden" name="action" value="checkout" />' +
+													'<input type="hidden" name="posData" value="" />' +
+													' <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJqMf1U87xJJoHD1B6YtCn6kE5Mx8ixALwHMrfKLZp7qoeIsvDANoaIeonjWHcJOuarJoZaxnSZamfVFBxPaX3iRnmuFpEmQvBRgP200a9EdvxpDNxbnC59ArnFOmTxvG0yrnLTsOhMmXEayS6lLZzCoXo81Ta30CUCzqdMFxAJThMDAzn1cmybga/vui6NnEJ" />' +
+													'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+												'</form>';
+											}
+											document.getElementById("insert").innerHTML = extraCost;
+											document.getElementById("insert1").innerHTML = totalCost;
+											document.getElementById("bitpay").innerHTML = buttonCode;
+										}}
+										</script>
+
+
+
 										<section class="wrapper style4 special container medium" >
 											<!-- Content -->
 												<div class="content">
@@ -78,26 +213,27 @@
 															</div>
 															<div class="col-6 col-12-mobile">
 																<b for="name">Select Fruit</b> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="strawberry" value="strawberry" id="strawberry"><label for="strawberry">Strawberry</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="pinklady" value="pinklady" id="pinklady"><label for="pinklady">Pink Lady</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="apple" value="apple" id="apple"><label for="apple">Green Apple</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="lemon"><label for="lemon">Lemon</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="mango"><label for="mango">Mango</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="passionfruit" value="passionfruit" id="passionfruit"><label for="passionfruit">Passion Fruit</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="cranberry"><label for="cranberry">Cranberry</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="guava"><label for="guava">Guava</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="watermelon" value="watermelon" id="watermelon"><label for="watermelon">Watermelon</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="grape" value="grape" id="grape"><label for="grape">Grape</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="cherry" value="cherry" id="cherry"><label for="cherry">Cherry</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="rasberry" value="rasberry" id="rasberry"><label for="rasberry">Rasberry</label> 
+																<par>3 included, each additional + 0.50</par><br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="strawberry" value="strawberry" id="fruit"><label for="strawberry">Strawberry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="pinklady" value="pinklady" id="fruit"><label for="pinklady">Pink Lady</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="apple" value="apple" id="fruit"><label for="apple">Green Apple</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="fruit"><label for="lemon">Lemon</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="fruit"><label for="mango">Mango</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="passionfruit" value="passionfruit" id="fruit"><label for="passionfruit">Passion Fruit</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="fruit"><label for="cranberry">Cranberry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="fruit"><label for="guava">Guava</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="watermelon" value="watermelon" id="fruit"><label for="watermelon">Watermelon</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="grape" value="grape" id="fruit"><label for="grape">Grape</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="cherry" value="cherry" id="fruit"><label for="cherry">Cherry</label> <br>
+																<input class="extra" onchange="checkboxes()" type="checkbox" name="rasberry" value="rasberry" id="fruit"><label for="rasberry">Rasberry</label>
 															</div>
 															<div class="col-6 col-12-mobile">
-																<b for="name">Select Herbs, Spices, and Seeds</b> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="ginger"><label for="ginger">Ginger</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="lavender" value="lavender" id="lavender"><label for="lavender">Lavender</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="chia"><label for="chia">Chia Seeds</label> <br>
+																	<b for="name">Select Herbs, Spices, and Seeds</b> <br>
+																	<input class="extra" onchange="checkboxes()" type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
+																	<input class="extra" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
+																	<input class="extra" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="premium"><label for="ginger">Ginger (+ 0.50)</label> <br>
+																	<input class="extra" onchange="checkboxes()" type="checkbox" name="lavender" value="lavender" id="premium"><label for="lavender">Lavender (+ 0.50)</label> <br>
+																	<input class="extra" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="premium"><label for="chia">Chia Seeds (+ 0.50)</label> <br>
 															</div>
 															<div class="col-12">
 																<b for="subject">Fermentation Period </b>
@@ -119,24 +255,26 @@
 																	<br>
 																	<br>
 																</div>
-                                </form>
-                                <form action="https://test.bitpay.com/checkout" method="post" >
-                                  <input type="hidden" name="action" value="checkout" />
-                                  <input type="hidden" name="posData" value="" />
-                                  <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJy+oc08bxzw/TMLirG9eVomzNvLSH19M7PGVubXUz0hkNjLWkdGlXSIoT+cTQIFNdOFisWY2FJJ09yShXspEusCIEZDMDOgi2zvmogNjhT6oJRXe1ulBv6qr/O2WY15kQ7KrWUexRTSAKcl28aVbwUPiqd1JaxqVi40Q6bRWZUtCNDlbrI72o3Auyqe5ephGV" />
-                                  <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
-                                </form>
-                            </div>
+					                                </form>
+																					<div id="bitpay">
+																						<form action="https://test.bitpay.com/checkout" method="post" >
+																							<input type="hidden" name="action" value="checkout" />
+																							<input type="hidden" name="posData" value="" />
+																							<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJbqJBBzhw6iglqdbgqkhHMap4E5VA5JDENCnhY/Tm0Vucdm/OIvh5OBQ8hQPVVsz0bqjKHPaxXmsoDqP4xRSFfEUBkOjzRVOt09++Ai71K8s6ud7xxznSA5rgyn39nY5BlYOj4MnLnwpTDBbuRbQbwtB4qUxT/VygeM8EBZ+A3KlvKnMPIrBD88k+00gmusST" />
+																							<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
+																						</form>
+																					</div>
+					                            </div>
 
-                    </section>
+					                    </section>
 
 
 
 
 						<section id="cta">
 
-							
-							
+
+
 
 						</section>
 						<footer id="footer">
