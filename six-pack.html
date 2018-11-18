@@ -43,7 +43,14 @@
 	var numAddons=0;
 	var extraCost=0;
 	var totalCost=24;
-function checkboxes(){
+	var buttonCode =
+	'<form action="https://test.bitpay.com/checkout" method="post" >' +
+		'<input type="hidden" name="action" value="checkout" />' +
+		'<input type="hidden" name="posData" value="" />' +
+		'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJbqJBBzhw6iglqdbgqkhHMap4E5VA5JDENCnhY/Tm0Vucdm/OIvh5OBQ8hQPVVsz0bqjKHPaxXmsoDqP4xRSFfEUBkOjzRVOt09++Ai71K8s6ud7xxznSA5rgyn39nY5BlYOj4MnLnwpTDBbuRbQbwtB4qUxT/VygeM8EBZ+A3KlvKnMPIrBD88k+00gmusST" />'+
+		'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+	'</form>';
+	function checkboxes(){
     var inputElems = document.getElementsByClassName("extra"),
     count = 0;
     for (var i=0; i<inputElems.length; i++) {
@@ -53,43 +60,36 @@ function checkboxes(){
 	numAddons=count;
 	extraCost=numAddons*(.5);
 	totalCost=24+extraCost;
-	document.getElementById("insert").innerHTML=extraCost;
-	document.getElementById("insert1").innerHTML=totalCost;
-	if(totalCost == 24){
-		document.getElementById("bitpay").innerHTML=
-		<form action="https://test.bitpay.com/checkout" method="post" >
-		  <input type="hidden" name="action" value="checkout" />
-		  <input type="hidden" name="posData" value="" />
-		  <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJbqJBBzhw6iglqdbgqkhHMap4E5VA5JDENCnhY/Tm0Vucdm/OIvh5OBQ8hQPVVsz0bqjKHPaxXmsoDqP4xRSFfEUBkOjzRVOt09++Ai71K8s6ud7xxznSA5rgyn39nY5BlYOj4MnLnwpTDBbuRbQbwtB4qUxT/VygeM8EBZ+A3KlvKnMPIrBD88k+00gmusST" />
-		  <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
-		</form>
-	}
 	if(totalCost == 24.5){
-		document.getElementById("bitpay").innerHTML=
-		<form action="https://test.bitpay.com/checkout" method="post" >
-		  <input type="hidden" name="action" value="checkout" />
-		  <input type="hidden" name="posData" value="" />
-		  <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ9l5evUirnt5Df8mIBj8+0cP4TGhb9y7G8YsH26B7/+EJcqoKV9LJrmYK5IG5Uzda7ZlxuaB1tcDoArhYBIf3o+oanrhZcty+rfi9xosx72iCKbvgEjkEX39qv83Degg48mSjsv0TEhvcEaadWVzgkZn836QohFK7MpTesTyi/wC4CyCuFcy0y92j9Hjt5Y51" />
-		  <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
-		</form>
+		var buttonCode =
+		'<form action="https://test.bitpay.com/checkout" method="post" >' +
+			'<input type="hidden" name="action" value="checkout" />' +
+			'<input type="hidden" name="posData" value="" />' +
+			'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ9l5evUirnt5Df8mIBj8+0cP4TGhb9y7G8YsH26B7/+EJcqoKV9LJrmYK5IG5Uzda7ZlxuaB1tcDoArhYBIf3o+oanrhZcty+rfi9xosx72iCKbvgEjkEX39qv83Degg48mSjsv0TEhvcEaadWVzgkZn836QohFK7MpTesTyi/wC4CyCuFcy0y92j9Hjt5Y51" />'+
+			'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >'+
+		'</form>';
 	}
 	if(totalCost == 25){
-	document.getElementById("bitpay").innerHTML=
-	<form action="https://test.bitpay.com/checkout" method="post" >
-  	<input type="hidden" name="action" value="checkout" />
-  	<input type="hidden" name="posData" value="" />
-  	<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ92GeF38QfVQb4bB/HwWboQBTdLXE/cbLAG/wqmG21VjvgzYse8eBATm+7aE3/Ch+ssT6mjsnxSA/ZRzodZSSplynMz4MR07f+PV9VqmG4+eRBqq69A2XYMeYMvpRb9iK58wVJUR2dYI1ltiFdX0jhxVDvN+RuN7aRMhzETqbGeBAHWhXKoFxpJ5IBkfIeqpt" />
-  	<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
-	</form>
+	var buttonCode =
+	'<form action="https://test.bitpay.com/checkout" method="post" >' +
+		'<input type="hidden" name="action" value="checkout" />' +
+		'<input type="hidden" name="posData" value="" />' +
+		'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ92GeF38QfVQb4bB/HwWboQBTdLXE/cbLAG/wqmG21VjvgzYse8eBATm+7aE3/Ch+ssT6mjsnxSA/ZRzodZSSplynMz4MR07f+PV9VqmG4+eRBqq69A2XYMeYMvpRb9iK58wVJUR2dYI1ltiFdX0jhxVDvN+RuN7aRMhzETqbGeBAHWhXKoFxpJ5IBkfIeqpt" />' +
+		'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >'+
+	'</form>';
 	}
 	else if(totalCost == 25.5){
-		<form action="https://test.bitpay.com/checkout" method="post" >
-		  <input type="hidden" name="action" value="checkout" />
-		  <input type="hidden" name="posData" value="" />
-		  <input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ92GeF38QfVQb4bB/HwWboXHJNNFffe5+ZOT5tip4gN22HJUAUaC2KwCnkmCY5wGpbKiawDmjxkrMkuqjOHwRRZ7RmIeV6z/q4kGTdI6Zp1OqvcTWH0JNSjvWhydRg1bZ3Lxt5yUuiik0HdWjIbvRSvQGT5qNQhNXQp6uYO60YvE6ko6hRgwr+0kZX4tnIoOv" />
-		  <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
-		</form>
+	var buttonCode =
+		'<form action="https://test.bitpay.com/checkout" method="post" >' +
+			'<input type="hidden" name="action" value="checkout" />' +
+			'<input type="hidden" name="posData" value="" />' +
+			'<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJ92GeF38QfVQb4bB/HwWboXHJNNFffe5+ZOT5tip4gN22HJUAUaC2KwCnkmCY5wGpbKiawDmjxkrMkuqjOHwRRZ7RmIeV6z/q4kGTdI6Zp1OqvcTWH0JNSjvWhydRg1bZ3Lxt5yUuiik0HdWjIbvRSvQGT5qNQhNXQp6uYO60YvE6ko6hRgwr+0kZX4tnIoOv" />' +
+			'<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >' +
+		'</form>';
 	}
+	document.getElementById("insert").innerHTML = extraCost;
+	document.getElementById("insert1").innerHTML = totalCost;
+	document.getElementById("bitpay").innerHTML = buttonCode;
 }}
 </script>
 
@@ -156,7 +156,14 @@ function checkboxes(){
 												<br>
 											</div>
                                 </form>
-																$<span id="bitpay"></span>
+																<div id="bitpay">
+																	<form action="https://test.bitpay.com/checkout" method="post" >
+																		<input type="hidden" name="action" value="checkout" />
+																		<input type="hidden" name="posData" value="" />
+																		<input type="hidden" name="data" value="v0BGPkhuQEjZIdeSYOJXPxLcHjG4pSP8m5r76gNjFwIQIfEtUZh56PoZIGNLjyGJbqJBBzhw6iglqdbgqkhHMap4E5VA5JDENCnhY/Tm0Vucdm/OIvh5OBQ8hQPVVsz0bqjKHPaxXmsoDqP4xRSFfEUBkOjzRVOt09++Ai71K8s6ud7xxznSA5rgyn39nY5BlYOj4MnLnwpTDBbuRbQbwtB4qUxT/VygeM8EBZ+A3KlvKnMPIrBD88k+00gmusST" />
+																		<input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width:210px;" alt="BitPay, the easy way to pay with bitcoins." >
+																	</form>
+																</div>
                             </div>
 
                     </section>
