@@ -7,7 +7,7 @@ $this_password= $_POST['password'];
 // $hashed_password = password_hash($this_password, PASSWORD_DEFAULT);
 $email=$_POST['email'];
 $check=pg_query($db_connection,"SELECT hashed_password FROM siteusers WHERE email='$email'");
-echo $hashed_password+"ddddd"+$check;
+echo "<script type="text/javascript">alert('$check');</script>";
 if(password_verify($this_password,$check)){
 	header('Location: member-home.php');
 }
