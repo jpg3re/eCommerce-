@@ -6,9 +6,10 @@ $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com por
 $this_password= $_POST['password'];
 // $hashed_password = password_hash($this_password, PASSWORD_DEFAULT);
 $email=$_POST['email'];
-$check=pg_query($db_connection,"SELECT hashed_password FROM siteusers WHERE email='$email'");
-echo "<html><script type="text/javascript">alert('$check');</script></html>";
-if(password_verify($this_password,$check)){
+$check=pg_query($db_connection,"SELECT password FROM siteusers WHERE email='$email'");
+//$row = pg_fetch_assoc($check);
+//echo "<html><script type="text/javascript">alert('$check');</script></html>";
+if(password_verify($this_password,$check){
 	header('Location: member-home.php');
 }
 else{
