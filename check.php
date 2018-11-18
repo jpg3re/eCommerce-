@@ -14,6 +14,6 @@ if(password_verify($this_password,$row['password'])){
 }
 else{
     echo "Incorrect email or password.";
-    header('Location: log-in.php');
+    header('Location: log-in2.php');
 }
 ?>
