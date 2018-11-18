@@ -22,7 +22,7 @@ $email=$_POST['email'];
        </script>
     <?php
 
-  header('Location: member-home.php');
+  header('Location: sign-up2.php');
         
          
      }
