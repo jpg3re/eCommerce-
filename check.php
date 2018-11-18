@@ -9,7 +9,7 @@ $email=$_POST['email'];
 $check=pg_query($db_connection,"SELECT * FROM siteusers WHERE email='$email'");
 $row = pg_fetch_assoc($check);
 //echo "<html><script type="text/javascript">alert('$check');</script></html>";
-if(password_verify($this_password,$row['password']){
+if(password_verify($this_password,$row['password'])){
 	header('Location: member-home.php');
 }
 else{
