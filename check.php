@@ -13,8 +13,6 @@ if($check == $hashed_password){
 }
 else{
     echo "Incorrect email or password.";
-    header('Location: log-in.php');
+    header('Location: member-home.php');
 }
-
-
 ?>
