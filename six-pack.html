@@ -192,38 +192,21 @@
 }}
 </script>
 <script>
-function onHoliday(e){
-	e.preventDefault();
+function onHoliday(){
+	document.getElementByClassName("extra").checked = false;
+	document.getElementById("green").checked = true;
+}
+</script>
+<script>
+function onFall(){
 	document.getElementByClassName("extra").checked = false;
 	document.getElementById("black").checked = true;
 }
 </script>
 <script>
-function onFall(e){
-	e.preventDefault();
-	var inputElems2 = document.getElementsByClassName("extra");
-	for (var i=0; i<inputElems2.length; i++) {
-		if(inputElems[i].type === "checkbox" && inputElems[i].id === "black"){
-			document.getElementById("black").checked = true;
-		}
-		else {
-			inputElems[i].checked = false;
-		}
-	}
-}
-</script>
-<script>
 function onFruit(e){
-	e.preventDefault();
-	var inputElems3 = document.getElementsByClassName("extra");
-	for (var i=0; i<inputElems3.length; i++) {
-		if(inputElems[i].type === "checkbox" && inputElems[i].id === "oolong"){
-			inputElems[i].checked = true;
-		}
-		else {
-			inputElems[i].checked = false;
-		}
-	}
+	document.getElementByClassName("extra").checked = false;
+	document.getElementById("white").checked = true;
 }
 </script>
 
