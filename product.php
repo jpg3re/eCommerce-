@@ -35,8 +35,10 @@
 	
 		?>
 		<script>
+			window.onload=function(){
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			document.getElementById("test").innerHTMl="testing";
+			};
 		</script>
 			<!-- Main -->
 				<article id="main">
