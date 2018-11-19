@@ -20,12 +20,8 @@
 		?>
 
 		<script>
-			console.log("rrrrrrr");
-			document.onload=function(){
 			var loggedIn='<?php echo $_SESSION["login"];?>';
-			console.log("shit");
-			document.getElementById("test").innerHTMl="testing";
-			};
+			console.log(loggedIn);
 		</script>
 
 
