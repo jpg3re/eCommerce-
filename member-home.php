@@ -25,7 +25,7 @@
 						<ul>
 							<li class="current"><a href="member-home.php">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
-							<li class="current"><a href="prouduct.php">Shop</a></li>
+							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="log-out.html" class="button primary">Log Out</a></li>
 						</ul>
@@ -49,7 +49,7 @@
                         <h1> <strong> Welcome Member! </strong> </h1>
 						<footer>
 							<ul class="buttons stacked">
-								<li><a href="prouduct.php" class="button fit scrolly">Create Your Recipe</a></li>
+								<li><a href="product.php" class="button fit scrolly">Create Your Recipe</a></li>
 							</ul>
 						</footer>
 
