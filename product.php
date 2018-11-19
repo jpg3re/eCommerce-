@@ -22,13 +22,12 @@
 		<script>
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			console.log(loggedIn);
-			var productLink;
 			if(loggedIn=="true"){
-				productLink='<li class="current"><a href="product.php">Shop</a></li>';
+				document.getElementById("products").href = "product.php";
 			}else{
-				productLink='<li class="current"><a href="log-in.php">Shop</a></li>';
+				document.getElementById("products").href = "log-in.php";
 			}
-			document.getElementById("products").innerHTML = productLink;
+			
 		</script>
 
 
@@ -42,7 +41,7 @@
 						<ul>
 							<li class="current"><a href="index.html">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
-							<div id="products"> </div>
+							<li class="current" id="products"><a href="#">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.php" class="button primary">Log In</a></li>
