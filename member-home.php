@@ -33,6 +33,7 @@
 				</header>
 						<script>
 							function logout(){
+								console.log("log out success");
 								<?php
 									session_unset(); 
 									session_destroy(); 
