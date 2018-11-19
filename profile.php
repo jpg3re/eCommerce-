@@ -57,13 +57,13 @@
 												<b><label for="name">Full Name</label></b>
                         <br/>
 												<!-- <input type="text" name="full_name" id="full_name"/> -->
-                        <par><?php echo $full_name; ?></par>
+                        <?php echo $_SESSION["full_name"]; ?>
 											</div>
 											<div class="col-12">
 												<b><label for="email">Email</label></b>
                         <br/>
 												<!-- <input type="text" name="email" title="Email" id="email" /> -->
-                        <par><?php echo $email ?></par>
+                        <?php echo $_SESSION["email"]; ?>
 											</div>
 											<div class="col-12">
 												<label for="name">Password</label>
