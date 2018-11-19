@@ -10,6 +10,8 @@ $check=pg_query($db_connection,"SELECT * FROM siteusers WHERE email='$email'");
 $row = pg_fetch_assoc($check);
 //echo "<html><script type="text/javascript">alert('$check');</script></html>";
 if(password_verify($this_password,$row['password'])){
+    session_start();
+    $_SESSION["login"]="true";
 	header('Location: member-home.php');
 }
 else{

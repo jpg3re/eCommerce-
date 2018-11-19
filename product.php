@@ -5,6 +5,14 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+		<?php
+		session_start();
+	
+		?>
+		<script>
+			var loggedIn='<?php echo $_SESSION["login"];?>';
+			document.getElementById("test").innerHTMl=loggedIn;
+		</script>
 	<head>
 		<title>Products</title>
 		<meta charset="utf-8" />
@@ -22,7 +30,7 @@
 						<ul>
 							<li class="current"><a href="index.html">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
-							<li class="current"><a href="product.html">Shop</a></li>
+							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.php" class="button primary">Log In</a></li>
@@ -35,7 +43,7 @@
 
 					<header class="special container">
 						<span class="icon fa-shopping-cart"></span>
-						<h2> <strong>Products</strong></h2>
+						<h2> <strong id="test">Products</strong></h2>
 					</header>
 
 					<!-- One -->
