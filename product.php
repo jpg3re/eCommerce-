@@ -40,10 +40,10 @@
 
 			<!-- Main -->
 				<article id="main">
-
+			<div id="test"> <div>
 					<header class="special container">
 						<span class="icon fa-shopping-cart"></span>
-						<h2> <strong id="test">Products</strong></h2>
+						<h2> <strong >Products</strong></h2>
 					</header>
 
 					<!-- One -->
