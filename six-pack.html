@@ -193,7 +193,10 @@
 </script>
 <script>
 function onHoliday(){
-	document.getElementsByClassName("extra").checked = false;
+var list = document.getElementsByClassName("extra");
+	for(var i=0; i<list.length; i++){
+		list[i].checked = false;
+	}
 	document.getElementById("black").checked = true;
 }
 </script>
@@ -205,6 +208,12 @@ function onHoliday(){
 																			<b for="name">Need Inspiration? Start with one of our templates</b>
 																			<ul class="buttons" style="text-align: center">
 																				<li><input type="button" onClick="onHoliday()" value="Holiday Spirit" /></li>
+																			</ul>
+																			<ul class="buttons" style="text-align: center">
+																				<li><input type="button" onClick="onFall()" value="FALL-ing for 'Bucha'" /></li>
+																			</ul>
+																			<ul class="buttons" style="text-align: center">
+																				<li><input type="button" onClick="onFruit()" value="Light & Fruity" /></li>
 																			</ul>
                                         <div class="col-6 col-12-mobile">
                                             <b for="name">Select Tea Leaves</b> <br>
