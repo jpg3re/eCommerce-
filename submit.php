@@ -13,7 +13,7 @@ $email=$_POST['email'];
 
      $check=pg_query($db_connection,"SELECT * FROM siteusers WHERE email='$email'");
       if(pg_num_rows($check)>0){
-         
+
          ?>
           <script>
 
@@ -23,18 +23,18 @@ $email=$_POST['email'];
     <?php
 
   header('Location: sign-up2.php');
-        
-         
+
+
      }
 else{
     //echo "Username works";
 	$query = "INSERT INTO siteusers VALUES ('$_POST[full_name]','$email','$_POST[address]', '$_POST[city]', '$_POST[state]', '$_POST[zip_code]', '$hashed_password')";
     $result = pg_query($query);
-    $mail = new PHPMailer;                              
+    $mail = new PHPMailer;
 $mail->IsSMTP();
-$mail->SMTPAuth   = true; 
+$mail->SMTPAuth   = true;
 $mail->Host ="smtp.gmail.com";
-$mail->Port = 587;  
+$mail->Port = 587;
 $mail->Username   = "custombucha@gmail.com"; // SMTP account username
 $mail->Password   = "Custombucha19";        // SMTP account password
 //$mail->SMTPDebug=4;
@@ -47,12 +47,19 @@ $mail->Password   = "Custombucha19";        // SMTP account password
  if(!$mail->send()) {
     echo 'Message was not sent.';
     echo 'Mailer error: ' . $mail->ErrorInfo;
-    
-	header('Location: index.php');
   } else {
     echo 'Message has been sent.';
   }
-  header('Location: index.php');
-}  
+  session_start();
+  header('Location: member-home.php');
+  $_SESSION["login"]="true";
+  $_SESSION["full_name"] = $_POST['full_name'];
+  $_SESSION["email"] = $_POST['email'];
+  $_SESSION["address"] = $_POST['address'];
+  $_SESSION["city"] = $_POST['city'];
+  $_SESSION["state"] = $_POST['state'];
+  $_SESSION["zip_code"] = $_POST['zip_code'];
+  $_SESSION["password"] = $hashed_password;
+}
 
 ?>
