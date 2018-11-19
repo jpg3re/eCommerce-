@@ -191,6 +191,47 @@
 											document.getElementById("bitpay").innerHTML = buttonCode;
 										}}
 										</script>
+										<script>
+										function onHoliday(){
+										var list = document.getElementsByClassName("extra");
+											for(var i=0; i<list.length; i++){
+												list[i].checked = false;
+											}
+											document.getElementById("green").checked = true;
+											document.getElementsByClassName("cranberry")[0].checked = true;
+											document.getElementById("gingerbread").checked = true;
+											document.getElementsByClassName("mint")[0].checked = true;
+											checkboxes();
+										}
+										</script>
+										<script>
+										function onFall(){
+										var list = document.getElementsByClassName("extra");
+											for(var i=0; i<list.length; i++){
+												list[i].checked = false;
+											}
+											document.getElementById("black").checked = true;
+											document.getElementsByClassName("pinklady")[0].checked = true;
+											document.getElementById("pumpkin").checked = true;
+											document.getElementsByClassName("ginger")[0].checked = true;
+											checkboxes();
+										}
+										</script>
+										<script>
+										function onFruit(){
+										var list = document.getElementsByClassName("extra");
+											for(var i=0; i<list.length; i++){
+												list[i].checked = false;
+											}
+											document.getElementById("oolong").checked = true;
+											document.getElementsByClassName("strawberry")[0].checked = true;
+										  document.getElementsByClassName("mango")[0].checked = true;
+											document.getElementsByClassName("guava")[0].checked = true;
+											document.getElementsByClassName("lemon")[0].checked = true;
+											document.getElementsByClassName("chia")[0].checked = true;
+											checkboxes();
+										}
+										</script>
 
 
 
@@ -199,6 +240,17 @@
 												<div class="content">
 													<form>
 														<div class="row gtr-50">
+															<div>
+																<b for="name">Need Inspiration? Start with one of our templates</b>
+															</div>
+															<br />
+															<div>
+																<ul class="buttons" style="text-align: center; float:left; font-size:0.7em">
+																	<li style="float:left"><input type="button" onClick="onHoliday()" value="Holiday Spirit" /></li>
+																	<li style="float:left"><input type="button" onClick="onFall()" value="Fall In A Bottle" /></li>
+																	<li style="float:left"><input type="button" onClick="onFruit()" value="Light & Fruity" /></li>
+																</ul>
+														</div>
 															<div class="col-6 col-12-mobile">
 																<b for="name">Select Tea Leaves</b> <br>
 																<input type="checkbox" name="green" value="green" id="green" ><label for="green">Green</label> <br>
@@ -214,14 +266,14 @@
 															<div class="col-6 col-12-mobile">
 																<b for="name">Select Fruit</b> <br>
 																<par>3 included, each additional + 0.50</par><br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="strawberry" value="strawberry" id="fruit"><label for="strawberry">Strawberry</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="pinklady" value="pinklady" id="fruit"><label for="pinklady">Pink Lady</label> <br>
+																<input class="extra strawberry" onchange="checkboxes()" type="checkbox" name="strawberry" value="strawberry" id="fruit"><label for="strawberry">Strawberry</label> <br>
+																<input class="extra pinklady" onchange="checkboxes()" type="checkbox" name="pinklady" value="pinklady" id="fruit"><label for="pinklady">Pink Lady</label> <br>
 																<input class="extra" onchange="checkboxes()" type="checkbox" name="apple" value="apple" id="fruit"><label for="apple">Green Apple</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="fruit"><label for="lemon">Lemon</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="fruit"><label for="mango">Mango</label> <br>
+																<input class="extra lemon" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="fruit"><label for="lemon">Lemon</label> <br>
+																<input class="extra mango" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="fruit"><label for="mango">Mango</label> <br>
 																<input class="extra" onchange="checkboxes()" type="checkbox" name="passionfruit" value="passionfruit" id="fruit"><label for="passionfruit">Passion Fruit</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="fruit"><label for="cranberry">Cranberry</label> <br>
-																<input class="extra" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="fruit"><label for="guava">Guava</label> <br>
+																<input class="extra cranberry" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="fruit"><label for="cranberry">Cranberry</label> <br>
+																<input class="extra guava" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="fruit"><label for="guava">Guava</label> <br>
 																<input class="extra" onchange="checkboxes()" type="checkbox" name="watermelon" value="watermelon" id="fruit"><label for="watermelon">Watermelon</label> <br>
 																<input class="extra" onchange="checkboxes()" type="checkbox" name="grape" value="grape" id="fruit"><label for="grape">Grape</label> <br>
 																<input class="extra" onchange="checkboxes()" type="checkbox" name="cherry" value="cherry" id="fruit"><label for="cherry">Cherry</label> <br>
@@ -230,10 +282,10 @@
 															<div class="col-6 col-12-mobile">
 																	<b for="name">Select Herbs, Spices, and Seeds</b> <br>
 																	<input class="extra" onchange="checkboxes()" type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
-																	<input class="extra" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
-																	<input class="extra" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="premium"><label for="ginger">Ginger (+ 0.50)</label> <br>
+																	<input class="extra mint" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
+																	<input class="extra ginger" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="premium"><label for="ginger">Ginger (+ 0.50)</label> <br>
 																	<input class="extra" onchange="checkboxes()" type="checkbox" name="lavender" value="lavender" id="premium"><label for="lavender">Lavender (+ 0.50)</label> <br>
-																	<input class="extra" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="premium"><label for="chia">Chia Seeds (+ 0.50)</label> <br>
+																	<input class="extra chia" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="premium"><label for="chia">Chia Seeds (+ 0.50)</label> <br>
 															</div>
 															<div class="col-12">
 																<b for="subject">Fermentation Period </b>
