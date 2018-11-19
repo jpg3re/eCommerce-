@@ -40,7 +40,7 @@
 
 			<!-- Main -->
 				<article id="main">
-			<div id="test"> <div>
+			<div id="test">test<div>
 					<header class="special container">
 						<span class="icon fa-shopping-cart"></span>
 						<h2> <strong >Products</strong></h2>
