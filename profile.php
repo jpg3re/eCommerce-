@@ -27,12 +27,12 @@
 					<h1 id="logo"><img src="images/logo_grey.png" alt="Custom-Bucha" width="15%"/></h1>
 					<nav id="nav">
 						<ul>
-              <li class="current"><a href="index.php">Welcome</a></li>
+							<li class="current"><a href="member-home.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.php">Contact Us</a></li>
-							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
-							<li><a href="log-in.php" class="button primary">Log In</a></li>
+							<li><a href="profile.php" class="button primary">My Profile</a></li>
+							<li><a href="logout.php" class="button primary" >Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
