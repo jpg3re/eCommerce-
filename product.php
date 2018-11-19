@@ -5,14 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-		<?php
-		session_start();
-	
-		?>
-		<script>
-			var loggedIn='<?php echo $_SESSION["login"];?>';
-			document.getElementById("test").innerHTMl="test";
-		</script>
+		
 	<head>
 		<title>Products</title>
 		<meta charset="utf-8" />
@@ -37,7 +30,14 @@
 						</ul>
 					</nav>
 				</header>
-
+				<?php
+		session_start();
+	
+		?>
+		<script>
+			var loggedIn='<?php echo $_SESSION["login"];?>';
+			document.getElementById("test").innerHTMl="testing";
+		</script>
 			<!-- Main -->
 				<article id="main">
 			<div id="test">test<div>
