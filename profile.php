@@ -73,28 +73,28 @@
 											<div class="col-12">
 												<b><label for="address">Address</label></b>
 												<br/>
-												<div id="address">
+												<div id="addressdiv">
 													<?php echo $_SESSION["address"]; ?>
 												</div>
 											</div>
 											<div class="col-4">
 												<b><label for="city">City</label></b>
 												<br/>
-												<div id="city">
+												<div id="citydiv">
 													<?php echo $_SESSION["city"]; ?>
 												</div>
 											</div>
 											<div class="col-4">
 												<b><label for="state">State</label></b>
 												<br />
-												<div id="state">
+												<div id="statediv">
 													<?php echo $_SESSION["state"]; ?>
 												</div>
 											</div>
 											<div class="col-4">
 												<b><label for="zip">Zip Code</label></b>
 												<br />
-												<div id="zip">
+												<div id="zipdiv">
 													<?php echo $_SESSION["zip_code"]; ?>
 												</div>
 											</div>
@@ -189,10 +189,10 @@
 				'<ul class="buttons" style="text-align: center">' +
 					'<li><input type="submit" class="signup" value="Save" /></li>' +
 				'</ul>';
-				document.getElementById("address").innerHTML = addressCode;
-				document.getElementById("state").innerHTML = stateCode;
-				document.getElementById("city").innerHTML = cityCode;
-				document.getElementById("zip").innerHTML = zipCode;
+				document.getElementById("addressdiv").innerHTML = addressCode;
+				document.getElementById("statediv").innerHTML = stateCode;
+				document.getElementById("citydiv").innerHTML = cityCode;
+				document.getElementById("zipdiv").innerHTML = zipCode;
 				document.getElementById("toggleButton").innerHTML = buttonCode;
 			}
 		</script>
