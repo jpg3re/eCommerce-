@@ -125,53 +125,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				$(document).ready(function() {
-
-				  $('#insert').submit(function(e) {
-				    // var password = $('#password').val();
-						// var full_name = $('#full_name').val();
-						// var email = $('#email').val();
-						var address = $('#address').val();
-						var city = $('#city').val();
-						var zip_code = $('#zip_code').val();
-						var state = $('#state').val();
-						$(".error").remove();
-						// if(full_name.length < 1) {
-						// 	$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
-						// 	e.preventDefault();
-						// }
-						// if (!/^[a-zA-Z\s]*$/.test(full_name)){
-						// 	$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
-						// 	e.preventDefault();
-						// }
-						// if (password.length < 8) {
-						// 	$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
-						// 	e.preventDefault();
-						// }
-						// if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-						// 	$('#email').after('<span class="error" style="color:red">Invalid email</span>');
-						// 	e.preventDefault();
-						// }
-						if(!/^[a-zA-Z0-9\-\s]+$/.test(address)){
-							$('#address').after('<span class="error" style="color:red">Invalid address</span>');
-							e.preventDefault();
-						}
-						if(!/^[a-zA-Z0-9\-\s]+$/.test(city)){
-							$('#city').after('<span class="error" style="color:red">Invalid city</span>');
-							e.preventDefault();
-						}
-						if(!/^[0-9]{5}(?:-[0-9]{4})?$/.test(zip_code)){
-							$('#zip_code').after('<span class="error" style="color:red">Invalid zip code</span>');
-							e.preventDefault();
-						}
-						if(state == ""){
-							$('#state').after('<span class="error" style="color:red">Must select a state</span>');
-							e.preventDefault();
-						}
-					});
-				 });
-		</script>
 		<script>
 			function onEdit(){
 				var addressCode = '<input type="text" name="address" id="address"/>';
@@ -243,5 +196,52 @@
 				document.getElementById("toggleButton").innerHTML = buttonCode;
 			}
 		</script>
+		<script>
+			$(document).ready(function() {
+
+				$('#insert').submit(function(e) {
+					// var password = $('#password').val();
+					// var full_name = $('#full_name').val();
+					// var email = $('#email').val();
+					var address = $('#address').val();
+					var city = $('#city').val();
+					var zip_code = $('#zip_code').val();
+					var state = $('#state').val();
+					$(".error").remove();
+					// if(full_name.length < 1) {
+					// 	$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
+					// 	e.preventDefault();
+					// }
+					// if (!/^[a-zA-Z\s]*$/.test(full_name)){
+					// 	$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
+					// 	e.preventDefault();
+					// }
+					// if (password.length < 8) {
+					// 	$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
+					// 	e.preventDefault();
+					// }
+					// if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+					// 	$('#email').after('<span class="error" style="color:red">Invalid email</span>');
+					// 	e.preventDefault();
+					// }
+					if(!/^[a-zA-Z0-9\-\s]+$/.test(address)){
+						$('#address').after('<span class="error" style="color:red">Invalid address</span>');
+						e.preventDefault();
+					}
+					if(!/^[a-zA-Z0-9\-\s]+$/.test(city)){
+						$('#city').after('<span class="error" style="color:red">Invalid city</span>');
+						e.preventDefault();
+					}
+					if(!/^[0-9]{5}(?:-[0-9]{4})?$/.test(zip_code)){
+						$('#zip_code').after('<span class="error" style="color:red">Invalid zip code</span>');
+						e.preventDefault();
+					}
+					if(state == ""){
+						$('#state').after('<span class="error" style="color:red">Must select a state</span>');
+						e.preventDefault();
+					}
+				});
+			 });
+	</script>
 	</body>
 </html>
