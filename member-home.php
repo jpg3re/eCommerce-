@@ -26,7 +26,7 @@
 							<li class="current"><a href="member-home.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
-							<li class="current"><a href="contact.html">Contact Us</a></li>
+							<li class="current"><a href="contact.php">Contact Us</a></li>
 							<li><a href="profile.php" class="button primary">My Profile</a></li>
 							<li><a href="logout.php" class="button primary" >Log Out</a></li>
 						</ul>

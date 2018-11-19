@@ -21,18 +21,7 @@
 		}
 		?>
 
-		<script>
-			var loggedIn='<?php echo $_SESSION["login"];?>';
-			console.log(loggedIn);
-			if(loggedIn=="true"){
-				document.getElementById("products").href = "product.php";
-				console.log("link to product");
-			}else{
-				document.getElementById("products").href = "log-in.php";
-				console.log("link to login");
-			}
-			
-		</script>
+		
 
 
 	<body class="left-sidebar is-preload">
@@ -45,14 +34,29 @@
 						<ul>
 							<li class="current"><a href="index.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
-							<li class="current" ><a href="#" id="products">Shop</a></li>
-							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
-							<li><a href="log-in.php" class="button primary">Log In</a></li>
+							<li class="current" ><a href="product.php">Shop</a></li>
+							<li class="current"><a href="contact.php">Contact Us</a></li>
+							<li><a id="link1" href="sign-up.php" class="button primary">Sign Up</a></li>
+							<li><a id="link2" href="log-in.php" class="button primary">Log In</a></li>
 						</ul>
 					</nav>
 				</header>
-				
+
+				<script>
+			var loggedIn='<?php echo $_SESSION["login"];?>';
+			console.log(loggedIn);
+			if(loggedIn=="true"){
+				document.getElementById("link1").href = "profile.php";
+				document.getElementById("link1").innerHTML="My Profile";
+
+				document.getElementById("link2").href = "logout.php";
+				document.getElementById("link2").innerHTML="Logout";
+				console.log("link to product");
+			}else{
+				console.log("link to login");
+			}
+			
+		</script>
 			<!-- Main -->
 				<article id="main">
 					<header class="special container">
