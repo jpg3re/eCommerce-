@@ -192,21 +192,42 @@
 }}
 </script>
 <script>
-function onHoliday(){
-	document.getElementByClassName("extra").checked = false;
-	document.getElementById("green").checked = true;
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "green"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
 }
 </script>
 <script>
-function onFall(){
-	document.getElementByClassName("extra").checked = false;
-	document.getElementById("black").checked = true;
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "black"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
 }
 </script>
 <script>
-function onFruit(e){
-	document.getElementByClassName("extra").checked = false;
-	document.getElementById("white").checked = true;
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "oolong"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
 }
 </script>
 
@@ -217,21 +238,15 @@ function onFruit(e){
                                 <form>
                                     <div class="row gtr-50">
 																			<b for="name">Need Inspiration? Start with one of our templates</b>
-																			<ul class="buttons" style="text-align: center">
-																				<li><input type="button" onClick="onHoliday()" value="Holiday Spirit" /></li>
-																			</ul>
-																			<ul class="buttons" style="text-align: center">
-																				<li><input type="button" onClick="onFall()" value="FALL-ing for 'Bucha" /></li>
-																			</ul>
-																			<ul class="buttons" style="text-align: center">
-																				<li><input type="button" onClick="onFruit()" value="Light & Fruity" /></li>
-																			</ul>
+																			<button class="small" onClick="handleHoliday()">Holiday Spirtit</button>
+																			<button class="small" onClick="handleFall()">FALL-ing For 'Bucha'</button>
+																			<button class="small" onClick="handleFruit()">Light & Fruity</button>
                                         <div class="col-6 col-12-mobile">
                                             <b for="name">Select Tea Leaves</b> <br>
-                                            <input class="extra" type="checkbox" name="green" value="green" id="green" ><label for="green">Green</label> <br>
-                                            <input class="extra" type="checkbox" name="black" value="black" id="black"><label for="black">Black</label> <br>
-											<input class="extra" type="checkbox" name="white" value="white" id="white"><label for="white">White</label> <br>
-											<input class="extra" type="checkbox" name="oolong" value="oolong" id="oolong"><label for="oolong">Oolong</label>
+                                            <input type="checkbox" name="green" value="green" id="green" ><label for="green">Green</label> <br>
+                                            <input type="checkbox" name="black" value="black" id="black"><label for="black">Black</label> <br>
+											<input type="checkbox" name="white" value="white" id="white"><label for="white">White</label> <br>
+											<input type="checkbox" name="oolong" value="oolong" id="oolong"><label for="oolong">Oolong</label>
                                         </div>
                                         <div class="col-6 col-12-mobile">
                                             <b for="name">Select Seasonal Flavors</b> <br>
