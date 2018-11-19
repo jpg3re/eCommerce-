@@ -191,13 +191,56 @@
 	document.getElementById("bitpay").innerHTML = buttonCode;
 }}
 </script>
-
+<script>
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "green"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
+}
+</script>
+<script>
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "black"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
+}
+</script>
+<script>
+function handleHoliday(){
+	var inputElems = document.getElementsByClassName("extra"),
+	for (var i=0; i<inputElems.length; i++) {
+		if(inputElems[i].type === "checkbox" && inputElems[i].checked === true && inputElems[i].id === "oolong"){
+			inputElems[i].checked = true;
+		}
+		else {
+			inputElems[i].checked = false;
+		}
+	}
+}
+</script>
+ 
 
                     <section class="wrapper style4 special container medium" >
                         <!-- Content -->
                             <div class="content">
                                 <form>
                                     <div class="row gtr-50">
+																			<b for="name">Need Inspiration? Start with one of our templates</b>
+																			<button class="small" onClick="handleHoliday()">Holiday Spirtit</button>
+																			<button class="small" onClick="handleFall()">FALL-ing For 'Bucha'</button>
+																			<button class="small" onClick="handleFruit()">Light & Fruity</button>
                                         <div class="col-6 col-12-mobile">
                                             <b for="name">Select Tea Leaves</b> <br>
                                             <input type="checkbox" name="green" value="green" id="green" ><label for="green">Green</label> <br>
