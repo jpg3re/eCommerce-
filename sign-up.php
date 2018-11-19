@@ -24,6 +24,7 @@
                             <li class="current"><a href="index.html">Welcome</a></li>
 							<li class="current"><a href="about-us.html">Our Story</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
+							<li class="current"><a href="proudct.php">Shop</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.php" class="button primary">Log In</a></li>
 						</ul>

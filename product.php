@@ -11,7 +11,7 @@
 		?>
 		<script>
 			var loggedIn='<?php echo $_SESSION["login"];?>';
-			document.getElementById("test").innerHTMl=loggedIn;
+			document.getElementById("test").innerHTMl="test";
 		</script>
 	<head>
 		<title>Products</title>
