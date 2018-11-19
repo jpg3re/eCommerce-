@@ -48,11 +48,11 @@ $mail->Password   = "Custombucha19";        // SMTP account password
     echo 'Message was not sent.';
     echo 'Mailer error: ' . $mail->ErrorInfo;
     
-	header('Location: login.php');
+	header('Location: index.php');
   } else {
     echo 'Message has been sent.';
   }
-  header('Location: member-home.php');
+  header('Location: index.php');
 }  
 
 ?>
