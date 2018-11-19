@@ -6,7 +6,12 @@
     Jill testing commit & push 9/17. Jill testing using Atom.
 -->
 <html>
-	
+	<?php
+		session_start();
+		if( $_SESSION["login"]!="true"){
+			header('Location: index.php');
+		}
+		?>
 
 	<head>
 		<title>CustomBucha</title>
