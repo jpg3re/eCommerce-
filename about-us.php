@@ -24,10 +24,10 @@
 						<ul>
 							<li class="current"><a id="home" href="index.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
-							<li class="current"><a id="link" href="product.php">Shop</a></li>
+							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
-							<li><a href="log-in.php" class="button primary">Log In</a></li>
+							<li><a id="link" href="sign-up.php" class="button primary">Sign Up</a></li>
+							<li><a id="logout" href="log-in.php" class="button primary">Log In</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -41,15 +41,14 @@
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			console.log(loggedIn);
 			if(loggedIn=="true"){
-				document.getElementById("link").href="product.php";
-				document.getElementById("home").href="member-home.php";
-				// var link= document.getElementById("link");
-				// link.setAttribute('href',"product.php");
+				document.getElementById("logout").href="logout.php";
+				document.getElementById("logout").innerHTML="Logout";
+
+				document.getElementById("link").href="profile.php";
+				document.getElementById("link").innerHTML="My Profile";
 				console.log("link to product");
 			}else{
-				document.getElementById("link").href="log-in.php";
-				document.getElementById("home").href="index.php";
-				//link.setAttribute('href',"log-in.php");
+				
 				console.log("link to login");
 			}
 			

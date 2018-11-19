@@ -32,9 +32,11 @@
 					</nav>
 				</header>
 				<?php
-				session_start();
-
-			?>
+		session_start();
+		if( $_SESSION["login"]!="true"){
+			header('Location: member-home.php');
+		}
+		?>
 
 	<script>
 		var loggedIn='<?php echo $_SESSION["login"];?>';
