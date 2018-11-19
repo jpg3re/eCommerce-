@@ -35,8 +35,10 @@
 	
 		?>
 		<script>
+			Console.log("rrrrrrr");
 			window.onload=function(){
 			var loggedIn='<?php echo $_SESSION["login"];?>';
+			Console.log("shit");
 			document.getElementById("test").innerHTMl="testing";
 			};
 		</script>
