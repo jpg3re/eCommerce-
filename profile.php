@@ -65,21 +65,28 @@
 												<!-- <input type="text" name="email" title="Email" id="email" /> -->
                         <?php echo $_SESSION["email"]; ?>
 											</div>
-											<div class="col-12">
+											<!-- <div class="col-12">
 												<label for="name">Password</label>
-												<input type="password" name="password" id="password"/>
-											</div>
+												<br/>
+											 <input type="password" name="password" id="password"/>
+											</div> -->
 											<div class="col-12">
 												<label for="address">Address</label>
-												<input type="text" name="address" id="address"/>
+												<br/>
+												<?php echo $_SESSION["address"]; ?>
+												<!-- <input type="text" name="address" id="address"/> -->
 											</div>
 											<div class="col-4">
 												<label for="city">City</label>
-												<input type="text" name="city" id="city"/>
+												<br/>
+												<!-- <input type="text" name="city" id="city"/> -->
+												<?php echo $_SESSION["city"]; ?>
 											</div>
 											<div class="col-4">
 												<label for="state">State</label>
-												<select name="state" id="state">
+												<br />
+												<?php echo $_SESSION["state"]; ?>
+												<!-- <select name="state" id="state">
 													<option value="" selected>Select State</option>
 													<option value="AL">Alabama</option>
 													<option value="AK">Alaska</option>
@@ -132,11 +139,13 @@
 													<option value="WV">West Virginia</option>
 													<option value="WI">Wisconsin</option>
 													<option value="WY">Wyoming</option>
-												</select>
+												</select> -->
 											</div>
 											<div class="col-4">
 												<label for="zip">Zip Code</label>
-												<input type="text" name="zip_code" id="zip_code">
+												<br />
+												<?php echo $_SESSION["zip_code"]; ?>
+												<!-- <input type="text" name="zip_code" id="zip_code"> -->
 											</div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
