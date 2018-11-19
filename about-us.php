@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	
+	<body class="left-sidebar is-preload">
 	<?php
 		session_start();
 	
@@ -31,7 +33,6 @@
 			}
 			
 		</script>
-	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
 				<!-- Header -->
