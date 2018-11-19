@@ -33,7 +33,7 @@
 				</header>
 				<?php
 		session_start();
-		if( $_SESSION["login"]!="true"){
+		if( $_SESSION["login"]=="true"){
 			header('Location: member-home.php');
 		}
 		?>
