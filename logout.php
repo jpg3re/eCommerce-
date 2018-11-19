@@ -1,5 +1,12 @@
 <?php
 	session_start();
      $_SESSION["login"]="false";
+		 unset($_SESSION["full_name"]);
+		 unset($_SESSION["email"]);
+		 unset($_SESSION["address"]);
+		 unset($_SESSION["city"]);
+		 unset($_SESSION["state"]);
+		 unset($_SESSION["zip_code"]);
+		 unset($_SESSION["password"]); 
      header("location:index.php");
 ?>

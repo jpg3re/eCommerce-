@@ -12,6 +12,13 @@ $row = pg_fetch_assoc($check);
 if(password_verify($this_password,$row['password'])){
     session_start();
     $_SESSION["login"]="true";
+    $_SESSION["full_name"] = $row['full_name'];
+    $_SESSION["email"] = $row['email'];
+    $_SESSION["address"] = $row['address'];
+    $_SESSION["city"] = $row['city'];
+    $_SESSION["state"] = $row['state'];
+    $_SESSION["zip_code"] = $row['zip_code'];
+    $_SESSION["password"] = $row['password']; 
 	header('Location: member-home.php');
 }
 else{
