@@ -27,7 +27,7 @@
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="index.html" class="button primary" onclick="logout()">Log Out</a></li>
+							<li><a href="index.html" class="button primary" >Log Out</a></li>
 						</ul>
 					</nav>
 				</header>

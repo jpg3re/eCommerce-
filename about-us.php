@@ -21,10 +21,12 @@
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			console.log(loggedIn);
 			if(loggedIn=="true"){
-				document.getElementById("product").href = "product.php";
+				var link= document.getElementById("product");
+				link.setAttribute('href',"product.php");
 				console.log("link to product");
 			}else{
-				document.getElementById("product").href = "log-in.php";
+				var link= document.getElementById("product");
+				link.setAttribute('href',"log-in.php");
 				console.log("link to login");
 			}
 			
