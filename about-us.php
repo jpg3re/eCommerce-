@@ -14,25 +14,7 @@
 	</head>
 	
 	<body class="left-sidebar is-preload">
-	<?php
-		session_start();
 	
-		?>
-
-		<script>
-			var loggedIn='<?php echo $_SESSION["login"];?>';
-			console.log(loggedIn);
-			if(loggedIn=="true"){
-				var link= document.getElementById("product");
-				link.setAttribute('href',"product.php");
-				console.log("link to product");
-			}else{
-				var link= document.getElementById("product");
-				link.setAttribute('href',"log-in.php");
-				console.log("link to login");
-			}
-			
-		</script>
 		<div id="page-wrapper">
 
 				<!-- Header -->
@@ -42,14 +24,34 @@
 						<ul>
 							<li class="current"><a href="index.html">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
-							<li class="current"><a id="product" href="product.php">Shop</a></li>
+							<li class="current"><a id="link" href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.php" class="button primary">Log In</a></li>
 						</ul>
 					</nav>
 				</header>
+				
+				<?php
+					session_start();
+	
+				?>
 
+		<script>
+			var loggedIn='<?php echo $_SESSION["login"];?>';
+			console.log(loggedIn);
+			if(loggedIn=="true"){
+				document.getElementById("link").href="product.php";
+				// var link= document.getElementById("link");
+				// link.setAttribute('href',"product.php");
+				console.log("link to product");
+			}else{
+				document.getElementById("link").href="log-in.php";
+				//link.setAttribute('href',"log-in.php");
+				console.log("link to login");
+			}
+			
+		</script>
 			<!-- Main -->
 				<article id="main">
 
