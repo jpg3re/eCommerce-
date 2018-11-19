@@ -20,10 +20,10 @@
 					<h1 id="logo"><img src="images/logo_grey.png" alt="Custom-Bucha" width="15%"/></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="index.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
-							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
+							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="sign-up.php" class="button primary">Sign Up</a></li>
 							<li><a href="log-in.php" class="button primary">Log In</a></li>
 						</ul>

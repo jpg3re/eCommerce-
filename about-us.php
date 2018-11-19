@@ -22,7 +22,7 @@
 					<h1 id="logo"><img src="images/logo_grey.png" alt="Custom-Bucha" width="15%"/></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a id="home" href="index.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a id="link" href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
@@ -31,7 +31,7 @@
 						</ul>
 					</nav>
 				</header>
-				
+
 				<?php
 					session_start();
 	
@@ -42,11 +42,13 @@
 			console.log(loggedIn);
 			if(loggedIn=="true"){
 				document.getElementById("link").href="product.php";
+				document.getElementById("home").href="member-home.php";
 				// var link= document.getElementById("link");
 				// link.setAttribute('href',"product.php");
 				console.log("link to product");
 			}else{
 				document.getElementById("link").href="log-in.php";
+				document.getElementById("home").href="index.php";
 				//link.setAttribute('href',"log-in.php");
 				console.log("link to login");
 			}

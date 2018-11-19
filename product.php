@@ -16,7 +16,9 @@
 
 		<?php
 		session_start();
-	
+		if( $_SESSION["login"]!="true"){
+			header('Location: log-in.php');
+		}
 		?>
 
 		<script>
@@ -41,7 +43,7 @@
 					<h1 id="logo"><img src="images/logo_grey.png" alt="Custom-Bucha" width="15%"/></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="index.php">Welcome</a></li>
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current" ><a href="#" id="products">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
