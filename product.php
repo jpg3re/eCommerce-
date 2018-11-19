@@ -13,6 +13,22 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+		<?php
+		session_start();
+	
+		?>
+
+		<script>
+			Console.log("rrrrrrr");
+			document.onload=function(){
+			var loggedIn='<?php echo $_SESSION["login"];?>';
+			Console.log("shit");
+			document.getElementById("test").innerHTMl="testing";
+			};
+		</script>
+
+
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
@@ -30,18 +46,7 @@
 						</ul>
 					</nav>
 				</header>
-				<?php
-		session_start();
-	
-		?>
-		<script>
-			Console.log("rrrrrrr");
-			window.onload=function(){
-			var loggedIn='<?php echo $_SESSION["login"];?>';
-			Console.log("shit");
-			document.getElementById("test").innerHTMl="testing";
-			};
-		</script>
+				
 			<!-- Main -->
 				<article id="main">
 			<div id="test">test<div>
