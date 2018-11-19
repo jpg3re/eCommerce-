@@ -29,7 +29,11 @@
 					</nav>
 				</header>
 
-
+				<?php
+					session_start();
+	
+				?>
+				
 				<script>
 						var loggedIn='<?php echo $_SESSION["login"];?>';
 						console.log(loggedIn);
