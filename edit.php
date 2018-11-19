@@ -14,4 +14,5 @@ $db_connection = pg_connect("host=ec2-184-72-234-230.compute-1.amazonaws.com por
   $e = $_SESSION['email'];
 	$query = "UPDATE siteusers SET address = '$a', city = '$c', state = '$s', zip_code = '$z' WHERE email = '$e'";
   $result = pg_query($query);
+  header('Location: profile.php');
 ?>
