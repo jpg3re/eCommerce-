@@ -27,19 +27,11 @@
 							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="index.html" class="button primary" >Log Out</a></li>
+							<li><a href="index.html" class="button primary" action="logout.php" >Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
-						<script>
-							function logout(){
-								console.log("log out success");
-								<?php
-								session_start();
-									 $_SESSION["login"]="false";
-								?>
-								}
-						</script>
+					
 			<!-- Banner -->
 				<section id="banner">
 
