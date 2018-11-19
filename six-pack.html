@@ -197,7 +197,10 @@ var list = document.getElementsByClassName("extra");
 	for(var i=0; i<list.length; i++){
 		list[i].checked = false;
 	}
-	document.getElementById("black").checked = true;
+	document.getElementById("green").checked = true;
+	document.getElementsByClassName("cranberry")[0].checked = true;
+	document.getElementById("gingerbread").checked = true;
+	document.getElementsByClassName("mint")[0].checked = true;
 }
 </script>
                     <section class="wrapper style4 special container medium" >
@@ -236,7 +239,7 @@ var list = document.getElementsByClassName("extra");
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="lemon" value="lemon" id="fruit"><label for="lemon">Lemon</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="mango" value="mango" id="fruit"><label for="mango">Mango</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="passionfruit" value="passionfruit" id="fruit"><label for="passionfruit">Passion Fruit</label> <br>
-											<input class="extra" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="fruit"><label for="cranberry">Cranberry</label> <br>
+											<input class="extra cranberry" onchange="checkboxes()" type="checkbox" name="cranberry" value="cranberry" id="fruit"><label for="cranberry">Cranberry</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="guava" value="guava" id="fruit"><label for="guava">Guava</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="watermelon" value="watermelon" id="fruit"><label for="watermelon">Watermelon</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="grape" value="grape" id="fruit"><label for="grape">Grape</label> <br>
@@ -246,7 +249,7 @@ var list = document.getElementsByClassName("extra");
                                         <div class="col-6 col-12-mobile">
                                             <b for="name">Select Herbs, Spices, and Seeds</b> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="basil" value="basil" id="basil"><label for="basil">Basil</label> <br>
-											<input class="extra" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
+											<input class="extra mint" onchange="checkboxes()" type="checkbox" name="mint" value="mint" id="mint"><label for="mint">Mint</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="ginger" value="ginger" id="premium"><label for="ginger">Ginger (+ 0.50)</label> <br>
                                             <input class="extra" onchange="checkboxes()" type="checkbox" name="lavender" value="lavender" id="premium"><label for="lavender">Lavender (+ 0.50)</label> <br>
 											<input class="extra" onchange="checkboxes()" type="checkbox" name="chia" value="chia" id="premium"><label for="chia">Chia Seeds (+ 0.50)</label> <br>
