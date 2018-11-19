@@ -20,10 +20,10 @@
 		?>
 
 		<script>
-			Console.log("rrrrrrr");
+			console.log("rrrrrrr");
 			document.onload=function(){
 			var loggedIn='<?php echo $_SESSION["login"];?>';
-			Console.log("shit");
+			console.log("shit");
 			document.getElementById("test").innerHTMl="testing";
 			};
 		</script>
