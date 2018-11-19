@@ -192,7 +192,8 @@
 }}
 </script>
 <script>
-function handleHoliday(){
+function handleHoliday(e){
+	e.preventDefault();
 	var inputElems1 = document.getElementsByClassName("extra");
 	for (var i=0; i<inputElems1.length; i++) {
 		if(inputElems[i].type === "checkbox" && inputElems[i].id === "green"){
@@ -205,7 +206,8 @@ function handleHoliday(){
 }
 </script>
 <script>
-function handleHoliday(){
+function handleHoliday(e){
+	e.preventDefault();
 	var inputElems2 = document.getElementsByClassName("extra");
 	for (var i=0; i<inputElems2.length; i++) {
 		if(inputElems[i].type === "checkbox" && inputElems[i].id === "black"){
@@ -218,7 +220,8 @@ function handleHoliday(){
 }
 </script>
 <script>
-function handleHoliday(){
+function handleHoliday(e){
+	e.preventDefault();
 	var inputElems3 = document.getElementsByClassName("extra");
 	for (var i=0; i<inputElems3.length; i++) {
 		if(inputElems[i].type === "checkbox" && inputElems[i].id === "oolong"){
