@@ -51,7 +51,7 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form id="insert" name="insert" action="submit.php" method="POST">
+									<form id="insert" name="insert" action="edit.php" method="POST">
 										<div class="row gtr-50">
 											<div class="col-12">
 												<b><label for="name">Full Name</label></b>
@@ -99,9 +99,11 @@
 												</div>
 											</div>
 											<div class="col-12">
-												<ul class="buttons" style="text-align: center">
-													<li><input type="button" onClick="onEdit()" value="Edit" /></li>
-												</ul>
+												<div id="toggleButton">
+													<ul class="buttons" style="text-align: center">
+														<li><input type="button" onClick="onEdit()" value="Edit" /></li>
+													</ul>
+												</div>
 											</div>
 										</div>
 									</form>
@@ -127,30 +129,30 @@
 				$(document).ready(function() {
 
 				  $('#insert').submit(function(e) {
-				    var password = $('#password').val();
-						var full_name = $('#full_name').val();
-						var email = $('#email').val();
+				    // var password = $('#password').val();
+						// var full_name = $('#full_name').val();
+						// var email = $('#email').val();
 						var address = $('#address').val();
 						var city = $('#city').val();
 						var zip_code = $('#zip_code').val();
 						var state = $('#state').val();
 						$(".error").remove();
-						if(full_name.length < 1) {
-							$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
-							e.preventDefault();
-						}
-						if (!/^[a-zA-Z\s]*$/.test(full_name)){
-							$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
-							e.preventDefault();
-						}
-						if (password.length < 8) {
-							$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
-							e.preventDefault();
-						}
-						if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-							$('#email').after('<span class="error" style="color:red">Invalid email</span>');
-							e.preventDefault();
-						}
+						// if(full_name.length < 1) {
+						// 	$('#full_name').after('<span class="error" style="color:red">Field can not be empty</span>');
+						// 	e.preventDefault();
+						// }
+						// if (!/^[a-zA-Z\s]*$/.test(full_name)){
+						// 	$('#full_name').after('<span class="error" style="color:red">Invalid name</span>');
+						// 	e.preventDefault();
+						// }
+						// if (password.length < 8) {
+						// 	$('#password').after('<span class="error" style="color:red">Password must be at least 8 characters long</span>');
+						// 	e.preventDefault();
+						// }
+						// if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+						// 	$('#email').after('<span class="error" style="color:red">Invalid email</span>');
+						// 	e.preventDefault();
+						// }
 						if(!/^[a-zA-Z0-9\-\s]+$/.test(address)){
 							$('#address').after('<span class="error" style="color:red">Invalid address</span>');
 							e.preventDefault();
@@ -230,10 +232,15 @@
 			 '</select>';
 				var cityCode = '<input type="text" name="city" id="city"/>';
 			  var zipCode = '<input type="text" name="zip_code" id="zip_code">';
+				var buttonCode =
+				'<ul class="buttons" style="text-align: center">' +
+					'<li><input type="submit" class="signup" value="Save" /></li>' +
+				'</ul>';
 				document.getElementById("address").innerHTML = addressCode;
 				document.getElementById("state").innerHTML = stateCode;
 				document.getElementById("city").innerHTML = cityCode;
 				document.getElementById("zip").innerHTML = zipCode;
+				document.getElementById("toggleButton").innerHTML = buttonCode;
 			}
 		</script>
 	</body>
