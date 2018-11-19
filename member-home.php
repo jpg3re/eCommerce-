@@ -35,6 +35,7 @@
 							function logout(){
 								console.log("log out success");
 								<?php
+								session_start();
 									 $_SESSION["login"]="false";
 								?>
 								}
