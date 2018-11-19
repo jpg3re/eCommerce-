@@ -71,85 +71,36 @@
 											 <input type="password" name="password" id="password"/>
 											</div> -->
 											<div class="col-12">
-												<label for="address">Address</label>
+												<b><label for="address">Address</label></b>
 												<br/>
-												<?php echo $_SESSION["address"]; ?>
-												<!-- <input type="text" name="address" id="address"/> -->
+												<div id="address">
+													<?php echo $_SESSION["address"]; ?>
+												</div>
 											</div>
 											<div class="col-4">
-												<label for="city">City</label>
+												<b><label for="city">City</label></b>
 												<br/>
-												<!-- <input type="text" name="city" id="city"/> -->
-												<?php echo $_SESSION["city"]; ?>
+												<div id="city">
+													<?php echo $_SESSION["city"]; ?>
+												</div>
 											</div>
 											<div class="col-4">
-												<label for="state">State</label>
+												<b><label for="state">State</label></b>
 												<br />
-												<?php echo $_SESSION["state"]; ?>
-												<!-- <select name="state" id="state">
-													<option value="" selected>Select State</option>
-													<option value="AL">Alabama</option>
-													<option value="AK">Alaska</option>
-													<option value="AZ">Arizona</option>
-													<option value="AR">Arkansas</option>
-													<option value="CA">California</option>
-													<option value="CO">Colorado</option>
-													<option value="CT">Connecticut</option>
-													<option value="DE">Delaware</option>
-													<option value="DC">District Of Columbia</option>
-													<option value="FL">Florida</option>
-													<option value="GA">Georgia</option>
-													<option value="HI">Hawaii</option>
-													<option value="ID">Idaho</option>
-													<option value="IL">Illinois</option>
-													<option value="IN">Indiana</option>
-													<option value="IA">Iowa</option>
-													<option value="KS">Kansas</option>
-													<option value="KY">Kentucky</option>
-													<option value="LA">Louisiana</option>
-													<option value="ME">Maine</option>
-													<option value="MD">Maryland</option>
-													<option value="MA">Massachusetts</option>
-													<option value="MI">Michigan</option>
-													<option value="MN">Minnesota</option>
-													<option value="MS">Mississippi</option>
-													<option value="MO">Missouri</option>
-													<option value="MT">Montana</option>
-													<option value="NE">Nebraska</option>
-													<option value="NV">Nevada</option>
-													<option value="NH">New Hampshire</option>
-													<option value="NJ">New Jersey</option>
-													<option value="NM">New Mexico</option>
-													<option value="NY">New York</option>
-													<option value="NC">North Carolina</option>
-													<option value="ND">North Dakota</option>
-													<option value="OH">Ohio</option>
-													<option value="OK">Oklahoma</option>
-													<option value="OR">Oregon</option>
-													<option value="PA">Pennsylvania</option>
-													<option value="RI">Rhode Island</option>
-													<option value="SC">South Carolina</option>
-													<option value="SD">South Dakota</option>
-													<option value="TN">Tennessee</option>
-													<option value="TX">Texas</option>
-													<option value="UT">Utah</option>
-													<option value="VT">Vermont</option>
-													<option value="VA">Virginia</option>
-													<option value="WA">Washington</option>
-													<option value="WV">West Virginia</option>
-													<option value="WI">Wisconsin</option>
-													<option value="WY">Wyoming</option>
-												</select> -->
+												<div id="state">
+													<?php echo $_SESSION["state"]; ?>
+												</div>
 											</div>
 											<div class="col-4">
-												<label for="zip">Zip Code</label>
+												<b><label for="zip">Zip Code</label></b>
 												<br />
-												<?php echo $_SESSION["zip_code"]; ?>
-												<!-- <input type="text" name="zip_code" id="zip_code"> -->
+												<div id="zip">
+													<?php echo $_SESSION["zip_code"]; ?>
+												</div>
 											</div>
 											<div class="col-12">
 												<ul class="buttons" style="text-align: center">
-													<li><input type="submit" class="signup" value="Sign Up" /></li>
+													<li><input type="button" onClick="onEdit()" value="Edit" /></li>
 												</ul>
 											</div>
 										</div>
@@ -218,6 +169,72 @@
 						}
 					});
 				 });
+		</script>
+		<script>
+			function onEdit(){
+				var addressCode = '<input type="text" name="address" id="address"/>';
+				var stateCode =
+				'<select name="state" id="state">' +
+				 	'<option value="" selected>Select State</option>'+
+				 	'<option value="AL">Alabama</option>' +
+				 	'<option value="AK">Alaska</option>' +
+				 	'<option value="AZ">Arizona</option>' +
+				  '<option value="AR">Arkansas</option>' +
+				  '<option value="CA">California</option>' +
+				  '<option value="CO">Colorado</option>' +
+				  '<option value="CT">Connecticut</option>' +
+				  '<option value="DE">Delaware</option>' +
+				  '<option value="DC">District Of Columbia</option>' +
+				  '<option value="FL">Florida</option>' +
+				  '<option value="GA">Georgia</option>' +
+				  '<option value="HI">Hawaii</option>' +
+				  '<option value="ID">Idaho</option>' +
+				  '<option value="IL">Illinois</option>' +
+				  '<option value="IN">Indiana</option>' +
+				  '<option value="IA">Iowa</option>' +
+				  '<option value="KS">Kansas</option>' +
+				  '<option value="KY">Kentucky</option>' +
+				  '<option value="LA">Louisiana</option>' +
+				  '<option value="ME">Maine</option>' +
+				  '<option value="MD">Maryland</option>' +
+				  '<option value="MA">Massachusetts</option>' +
+				  '<option value="MI">Michigan</option>' +
+				  '<option value="MN">Minnesota</option>' +
+				  '<option value="MS">Mississippi</option>' +
+				  '<option value="MO">Missouri</option>' +
+				  '<option value="MT">Montana</option>' +
+				  '<option value="NE">Nebraska</option>' +
+				  '<option value="NV">Nevada</option>' +
+				  '<option value="NH">New Hampshire</option>' +
+				  '<option value="NJ">New Jersey</option>' +
+				  '<option value="NM">New Mexico</option>' +
+				  '<option value="NY">New York</option>' +
+				  '<option value="NC">North Carolina</option>' +
+				  '<option value="ND">North Dakota</option>' +
+				  '<option value="OH">Ohio</option>' +
+				  '<option value="OK">Oklahoma</option>' +
+				  '<option value="OR">Oregon</option>' +
+				  '<option value="PA">Pennsylvania</option>' +
+				  '<option value="RI">Rhode Island</option>' +
+				  '<option value="SC">South Carolina</option>' +
+				  '<option value="SD">South Dakota</option>' +
+				  '<option value="TN">Tennessee</option>' +
+				  '<option value="TX">Texas</option>' +
+				  '<option value="UT">Utah</option>' +
+				  '<option value="VT">Vermont</option>' +
+				  '<option value="VA">Virginia</option>' +
+				  '<option value="WA">Washington</option>' +
+				  '<option value="WV">West Virginia</option>' +
+				  '<option value="WI">Wisconsin</option>' +
+				  '<option value="WY">Wyoming</option>' +
+			 '</select>';
+				var cityCode = '<input type="text" name="city" id="city"/>';
+			  var zipCode = '<input type="text" name="zip_code" id="zip_code">';
+				document.getElementById("address").innerHTML = addressCode;
+				document.getElementById("state").innerHTML = stateCode;
+				document.getElementById("city").innerHTML = cityCode;
+				document.getElementById("zip").innerHTML = zipCode;
+			}
 		</script>
 	</body>
 </html>
