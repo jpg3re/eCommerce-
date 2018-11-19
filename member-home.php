@@ -27,11 +27,18 @@
 							<li class="current"><a href="about-us.html">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
-							<li><a href="log-out.html" class="button primary">Log Out</a></li>
+							<li><a href="log-out.html" class="button primary" onclick="logout()">Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
-
+						<script>
+							function logout(){
+								<?php
+									session_unset(); 
+									session_destroy(); 
+								?>
+								}
+						</script>
 			<!-- Banner -->
 				<section id="banner">
 
