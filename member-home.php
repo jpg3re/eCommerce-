@@ -28,7 +28,7 @@
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="profile.php" class="button primary">My Profile</a></li>
-							<li><a href="index.php" class="button primary" action="logout.php" >Log Out</a></li>
+							<li><a href="logout.php" class="button primary" >Log Out</a></li>
 						</ul>
 					</nav>
 				</header>
