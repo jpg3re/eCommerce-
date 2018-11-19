@@ -24,7 +24,7 @@
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="member-home.php">Welcome</a></li>
-							<li class="current"><a href="about-us.html">Our Story</a></li>
+							<li class="current"><a href="about-us.php">Our Story</a></li>
 							<li class="current"><a href="product.php">Shop</a></li>
 							<li class="current"><a href="contact.html">Contact Us</a></li>
 							<li><a href="index.html" class="button primary" onclick="logout()">Log Out</a></li>
@@ -92,7 +92,7 @@
 									<p>As a great source of probiotics, it significantly improves digestion. It has also been shown to increase energy, strengthen the immune system and reduce cholesterol.</p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="about-us.html" class="button">See Why We Love Kombucha</a></li>
+											<li><a href="about-us.php" class="button">See Why We Love Kombucha</a></li>
 										</ul>
 									</footer>
 
@@ -158,7 +158,7 @@
 					<footer>
 						<ul class="buttons">
 							<li><a href="#" class="button primary">Begin Your Recipe</a></li>
-							<li><a href="about-us.html" class="button">Read More About Us</a></li>
+							<li><a href="about-us.php" class="button">Read More About Us</a></li>
 						</ul>
 					</footer>
 
