@@ -40,7 +40,7 @@
 					</nav>
 				</header>
 
-				<!-- <script>
+				<script>
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			console.log(loggedIn);
 			if(loggedIn=="true"){
@@ -54,7 +54,7 @@
 				console.log("link to login");
 			}
 
-		</script> -->
+		</script>
 
 			<!-- Main -->
 				<article id="main">

@@ -6,7 +6,7 @@
     Jill testing commit & push 9/17. Jill testing using Atom.
 -->
 <html>
-	
+
 	<head>
 		<title>CustomBucha</title>
 		<meta charset="utf-8" />
@@ -38,7 +38,7 @@
 		}
 		?>
 
-	<script>
+	<!-- <script>
 		var loggedIn='<?php echo $_SESSION["login"];?>';
 		console.log(loggedIn);
 		if(loggedIn=="true"){
@@ -47,7 +47,7 @@
 		}else{
 			document.getElementById("link").href="log-in.php";
 			console.log("link to login");
-		}
+		} -->
 		
 	</script>
 			<!-- Banner -->
