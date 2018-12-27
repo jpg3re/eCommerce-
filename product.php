@@ -14,12 +14,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 
-		<!-- <?php
-		session_start();
-		if( $_SESSION["login"]!="true"){
-			header('Location: log-in.php');
-		}
-		?> -->
+
 
 
 	<body class="left-sidebar is-preload">
