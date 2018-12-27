@@ -14,7 +14,14 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 
-	
+		<!-- <?php
+		session_start();
+		if( $_SESSION["login"]!="true"){
+			header('Location: log-in.php');
+		}
+		?> -->
+
+
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
 
@@ -33,7 +40,7 @@
 					</nav>
 				</header>
 
-				<script>
+				<!-- <script>
 			var loggedIn='<?php echo $_SESSION["login"];?>';
 			console.log(loggedIn);
 			if(loggedIn=="true"){
@@ -47,7 +54,8 @@
 				console.log("link to login");
 			}
 
-		</script>
+		</script> -->
+
 			<!-- Main -->
 				<article id="main">
 					<header class="special container">
